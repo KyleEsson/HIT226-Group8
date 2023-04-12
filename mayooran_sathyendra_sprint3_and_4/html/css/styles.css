@@ -1,0 +1,87 @@
+
+header {
+    text-align: center;
+}
+
+body {
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Card related styling */
+
+.card {
+    background: #8d99ae;
+    width: 270px;
+    height: 400px;
+    margin:50px;
+    border-radius: 15px 15px 0 0;
+}
+
+.c_image {
+    height: 250px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.person1 {
+    background-image: url("person1.jpg");
+       
+}
+
+.person2 {
+    background-image: url("person2.jpg");
+}
+
+.person3 {
+    background-image: url("person3.jpg");
+}
+
+.person4 {
+    background-image: url("person4.jpg");
+}
+
+.person5 {
+    background-image: url("person5.jpg");
+}
+
+.card h2 {
+    padding: 10px;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.card a {
+    background-color: #2b2d42;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: rgb(62, 62, 62);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: all 0.3s ease-out;
+}
+
+.card:not(:hover) {
+    transition: all 0.6s ease;
+}
+
+
+
+
+
