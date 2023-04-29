@@ -100,3 +100,12 @@ card6.addEventListener("click", function handleClick() {
     head.innerText = (ocd.title);
     details.innerText = (ocd.info);
 })
+
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}

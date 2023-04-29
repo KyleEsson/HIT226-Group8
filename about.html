@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Roboto:wght@400;500;700&family=Titan+One&display=swap" rel="stylesheet">
@@ -12,17 +13,23 @@
     <title>Bookings</title>
 </head>
 <body>
-    <header>
-        <img class="logo" src="images/mind.png" alt="blue mind logo">
+    <nav class="topnav">
         <h1>BLUE MINDS</h1>
-        <div class="nav">
+        <!-- Navigation links (hidden by default) -->
+        <div class="links" id="myLinks">
             <a href="index.html">Home</a>
+            <a href="bookings.html">Bookings</a>
             <a href="contacts.html">Contacts</a>
             <a href="stories.html">Stories</a>
         </div>
-    </header>
+        <!-- Hamburger menu -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </nav>
     <section>
         <h2>About Mental Health</h2>
+        <!-- Cards for about page (function as whole buttons) -->
         <div class="card-container">
             <div id="card1" class="card">
                 <img src="images/help.png" alt="Seeking Help">
