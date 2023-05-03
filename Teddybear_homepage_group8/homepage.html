@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Roboto:wght@400;500;700&family=Titan+One&display=swap" rel="stylesheet">
+    <script defer src="homepage.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <nav class="topnav">
+        <h1>BLUE MINDS</h1>
+        <!-- Navigation links (hidden by default) -->
+        <div class="links" id="myLinks">
+            <a href="bookings.html">Bookings</a>
+            <a href="contacts.html">Contacts</a>
+            <a href="stories.html">Stories</a>
+            <a href="about.html">About</a>
+        </div>
+        <!-- "Hamburger menu" -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <section>
+        <div class="card-container">
+            <div class="card">
+              <img src="anxiety.jpg" alt="Anxiety">
+              <h2>About</h2>
+              <p>We are a mental health website and there are more information about different kinds of mental health illness. As you can see there is a link below to read more about kinds of mental health illness.</p>
+              <ul>
+                <li><a href="indexteam.html" onclick="displaySearch()">Click Here For More Informations</a></li>
+              </ul>
+            </div>
+            
+            <div class="card">
+              <img src="loneliness.jpeg" alt="Loneliness">
+              <h2>Professor Team</h2>
+              <p>Having a professional team is essential for any mental health website. Mental health professionals on the team can provide valuable insights and knowledge about mental health, the latest treatments, and best practices.</p>
+              
+              <ul>
+                <li><a href="#" onclick="displayFeatured()">Visit Our Professional Team</a></li>
+              </ul>
+            </div>
+            
+            <div class="card">
+              <img src="dipolar.jpg" alt="Bipolar Disorder">
+              <h2>Booking</h2>
+              <p>Booking is an essential feature for any mental health website that offers counseling or therapy services. It allows users to schedule appointments with mental health professionals easily and efficiently, providing them with the care and support they need.</p>
+              <ul>
+                <li><a href="#" onclick="displayTestimonials()">Our Services</a></li>
+              </ul>
+            </div>
+            
+            <div class="card">
+              <img src="ocd.jpg" alt="OCD">
+              <h2>Contact Us</h2>
+              <p>If you have any questions or messages want to inform our team, please click the link below to get contact with us.</p>
+              <ul>
+                <li><a href="#" onclick="displayServices()">Contacts</a></li>
+              </ul>
+            </div>         
+          
+          <div class="mood-box">
+            <h3>How are you feeling today?</h3>
+            <div class="mood-options">
+              <button class="mood-button happy" data-mood="Happy">😀</button>
+              <button class="mood-button neutral" data-mood="Neutral">😐</button>
+              <button class="mood-button sad" data-mood="Sad">😔</button>
+            </div>
+            <p class="selected-mood">You haven't selected a mood yet.</p>
+            <button class="submit-button">Submit</button>
+          </div>
+    </section>
+    <footer>
+        <p>HIT226 Sprint 3&4</p>
+    </footer>
+</body>
+</html>
