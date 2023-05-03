@@ -27,9 +27,26 @@
         <i class="fa fa-bars"></i>
         </a>
     </nav>
-    </div>
     <section>
-
+        <button data-open-modal class="share">SHARE YOUR STORY</button>
+        <dialog data-modal class="shareModal">
+            <button class="shareClose" closeShare>
+                <i class="fa fa-close"></i>
+            </button>
+            <h3 class="shareTitle">Share Your Story</h3>
+            <form action="">
+                <div>
+                    <label class="shareLabel" for="name" >Name or Alias</label>
+                    <input class="shareName" type="text" name="Name or Alias" placeholder="Enter name or alias here....">
+                </div>
+                <div>
+                    <label class="shareLabel" for="story">Share your story with others</label>
+                    <textarea class="shareStory" name="story" id="storyShare" cols="10" rows="5" wrap="soft" placeholder="Enter the story you would like to share here...."></textarea>
+                </div>
+            </form>
+            <button data-close-modal>Close</button>
+        </dialog>
+    
     </section>
     <footer>
         <p>HIT226 Sprint 3&4</p>

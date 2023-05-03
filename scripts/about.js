@@ -8,6 +8,7 @@ const head = document.getElementById('head')
 const details = document.getElementById('details')
 
 
+
 class about {
     constructor(title, info) {
         this.title = title;
@@ -60,6 +61,10 @@ const ocd = new about(
     Treatment for OCD typically involves a combination of medication and therapy, such as cognitive-behavioral therapy (CBT) or exposure and response prevention (ERP). These treatments can help individuals with OCD learn to manage their symptoms, reduce their anxiety, and improve their quality of life. With the right support and treatment, many people with OCD are able to live fulfilling, meaningful lives.`
 );
 
+
+// const about_details = require('../scripts/about.json');
+// console.log(about_details);
+
 this.addEventListener("DOMContentLoaded", preloadImages, true);
 
 function preloadImages(e) {
@@ -70,6 +75,15 @@ function preloadImages(e) {
         tempImage.src = imageArray[i];
     }
 }
+
+const anxT = ""
+
+fetch('../scripts/about.json')
+    .then(res => res.json())
+    .then(about_details => {
+        console.log(about_details);
+    })
+
 
 card1.addEventListener("click", function handleClick() {
     head.innerText = (seek.title);

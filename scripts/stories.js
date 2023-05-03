@@ -7,3 +7,15 @@ function myFunction() {
         x.style.display = "block";
     }
 }
+
+const openButton = document.querySelector('[data-open-modal]');
+const closeButton = document.querySelector('[closeShare]');
+const modal = document.querySelector('[data-modal]');
+
+openButton.addEventListener('click', () => {
+    modal.showModal();
+})
+
+closeButton.addEventListener('click', () => {
+    modal.close();
+})

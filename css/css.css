@@ -12,7 +12,6 @@ section {
 footer {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    background: #0056ac;
     background: linear-gradient(90deg, #0056ac 43%, #428edb 100%);
     color: #f1f1f1;
     height: 50px;
@@ -38,9 +37,10 @@ h1 {
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
+.topnav .links {
     display: none;
-    margin-left: 10px;
+    margin-left: 87%;
+    text-align: right;
 }
 
 /* Style navigation menu links */
@@ -51,6 +51,8 @@ h1 {
     font-family: 'Paytone One', sans-serif;
     font-size: 25px;
     display: block;
+    right: 0;
+    top: 0;
 }
 
 /* Style the hamburger menu */
@@ -60,7 +62,7 @@ h1 {
     font-size: 50px;
     right: 0;
     top: 0;
-    vertical-align: middle;
+
 }
 
 /*________________________________ABOUT.HTML CSS________________________________________*/
@@ -181,6 +183,94 @@ h2 {
     color: #636363;
 }
 
+/*________________________________STORIES.HTML CSS________________________________________*/
+
+.share {
+    background: linear-gradient(90deg, #0056ac 43%, #428edb 100%);
+    border: none;
+    border-radius: 10px;
+    border-style: solid;
+    color: #f1f1f1;
+    padding: 10px 10px;
+    font-family: 'Paytone One', sans-serif;
+    font-size: x-large;
+    position: sticky;
+    margin-left: 79%;
+    cursor: pointer;
+}
+
+.shareModal {
+    background-color: #f6f6f6;
+    border-color: #0056ac;
+    border-radius: 10px;
+}
+
+dialog::backdrop {
+    background-color: hsla(0, 0%, 40%, 0.701);
+}
+
+.shareClose {
+    position: absolute;
+    font-size: 20px;
+    right: 0;
+    top: 0;
+    border: none;
+    color: #0056ac;
+    padding-top: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.shareTitle {
+    color: #428edb;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 50px;
+    position: relative;
+    top: -50px;
+    text-align: center;
+}
+
+.shareLabel {
+    color: #005ab5;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.shareName {
+    width: 95%;
+    height: 1%;
+    padding: 10px;
+    margin-bottom: 40px;
+    margin-top: 5px;
+    border: solid;
+    border-color: #1b8dff;
+    border-width: 2px;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+}
+
+.shareStory {
+    width: 95%;
+    height: 50%;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: solid;
+    border-width: 2px;
+    border-color: #1b8dff;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    line-height: 30px;
+    padding-bottom: 200px;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    resize: none;
+}
 
 /*_________________________mobile adjustments_____________________________*/
 
@@ -242,7 +332,7 @@ h2 {
         font-size: 28px;
     }
 
-    .topnav #myLinks {
+    .topnav .links {
         display: none;
         margin-left: 1px;
     }
@@ -250,6 +340,10 @@ h2 {
     .topnav a {
         padding: 8px 9px;
         font-size: 15px;
+    }
+
+    .share {
+        font-size: smaller;
     }
 }
 
