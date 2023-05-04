@@ -34,19 +34,22 @@
                 <i class="fa fa-close"></i>
             </button>
             <h3 class="shareTitle">Share Your Story</h3>
-            <form action="">
+            <img class="storyImg" src="images/story.png" alt="story book">
+            <form name="shareForm" action="" onsubmit="event.preventDefault();">
                 <div>
                     <label class="shareLabel" for="name" >Name or Alias</label>
-                    <input class="shareName" type="text" name="Name or Alias" placeholder="Enter name or alias here....">
+                    <input id="shareName" class="shareName" type="text" name="name" placeholder="Enter name or alias here....">
                 </div>
                 <div>
                     <label class="shareLabel" for="story">Share your story with others</label>
-                    <textarea class="shareStory" name="story" id="storyShare" cols="10" rows="5" wrap="soft" placeholder="Enter the story you would like to share here...."></textarea>
+                    <textarea id="shareStory" class="shareStory" name="story" id="storyShare" cols="10" rows="5" wrap="soft" placeholder="Enter the story you would like to share here...."></textarea>
                 </div>
+                <img class="postBtn" src="images/post.png" alt="post button" onclick="submitStory()">
             </form>
-            <button data-close-modal>Close</button>
         </dialog>
-    
+        <div class="storyCards">
+            
+        </div>
     </section>
     <footer>
         <p>HIT226 Sprint 3&4</p>
