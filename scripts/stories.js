@@ -35,10 +35,12 @@ let storyData = [];
 function submitStory() {
     let name = document.querySelector('#shareName').value;
     let story = document.querySelector('#shareStory').value;
+    let avatar = document.querySelector('#shareSelect').value;
 
     let storyDataObject = {
         name: name,
         story: story,
+        avatar: avatar,
     };
 
     storyData.push(storyDataObject);
@@ -65,7 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // create cards for displaying stories
             const divElement = document.createElement('div');
             divElement.classList.add('storyCard');
-            divElement.innerHTML = '<h4>' + storyData[i].name + '</h4>';
+            divElement.innerHTML = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
+            const namePost = `<h4>` + storyData[i].name + `<h4>`;
+            divElement.insertAdjacentHTML('beforeend', namePost);
             const storyPost = `<p>` + storyData[i].story + `</p>`;
             divElement.insertAdjacentHTML('beforeend', storyPost);
             const subject = document.querySelector(".storyCards");

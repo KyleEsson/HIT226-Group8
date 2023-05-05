@@ -251,7 +251,7 @@ dialog::backdrop {
     width: 95%;
     height: 1%;
     padding: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     margin-top: 5px;
     border: solid;
     border-color: #1b8dff;
@@ -261,6 +261,52 @@ dialog::backdrop {
     font-family: 'Roboto', sans-serif;
     font-size: larger;
 }
+
+/* Custom select menu */
+.shareSelect {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    border: solid;
+    border-color: #1b8dff;
+    border-width: 2px;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #eaeaea;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+/* Dropdown arrow */
+.shareSelect:after {
+    position: absolute;
+    top: 50%;
+    right: 1.25rem;
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-top: -.15rem;
+    pointer-events: none;
+    border-top: .35rem solid;
+    border-right: .35rem solid transparent;
+    border-bottom: .35rem solid transparent;
+    border-left: .35rem solid transparent;
+}
+
+/* Focus */
+.shareSelect select:focus {
+    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
+}
+
+/* Active/open */
+.shareSelect select:active {
+    color: #bcbcbc;
+    background-color: #0074d9;
+}
+
 
 .shareStory {
     width: 95%;
@@ -296,8 +342,8 @@ dialog::backdrop {
 }
 
 .storyCard {
-    width: 20%;
-    height: 400px;
+    width: 25%;
+    height: 500px;
     border: solid;
     border-color: #3f9fff;
     border-radius: 15px;
@@ -306,11 +352,19 @@ dialog::backdrop {
     margin: 20px;
 }
 
+.storyCard img {
+    height: 120px;
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+}
+
 .storyCard h4 {
     font-family: 'Paytone One', sans-serif;
     font-size: xx-large;
     text-align: center;
     color: #eaeaea;
+    margin: 0;
 }
 
 .storyCard p {
