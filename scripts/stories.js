@@ -1,42 +1,11 @@
-/* Function to check if local storage is supported */
-function storageAvailable(type) {
-    let storage;
-    try {
-        storage = window[type];
-        const x = "__storage_test__";
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    } catch (e) {
-        return (
-            e instanceof DOMException &&
-            // everything except Firefox
-            (e.code === 22 ||
-                // Firefox
-                e.code === 1014 ||
-                // test name field too, because code might not be present
-                // everything except Firefox
-                e.name === "QuotaExceededError" ||
-                // Firefox
-                e.name === "NS_ERROR_DOM_QUOTA_REACHED") &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            storage &&
-            storage.length !== 0
-        );
-    }
-}
-
-if (storageAvailable("localStorage")) {
-    // Yippee! We can use localStorage awesomeness
+// Function to check if local storage is supported
+if (typeof (Storage) !== "undefined") {
     console.log("localStorage is supported");
 } else {
-    // Too bad, no localStorage for us
     console.log("localStorage is not supported");
 }
 
-
-
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+// Toggle between showing and hiding the navigation menu 
 function myFunction() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
@@ -46,7 +15,7 @@ function myFunction() {
     }
 }
 
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+// Toggle between showing and hiding the story modal
 const openButton = document.querySelector('[data-open-modal]');
 const closeButton = document.querySelector('[closeShare]');
 const modal = document.querySelector('[data-modal]');
@@ -59,20 +28,48 @@ closeButton.addEventListener('click', () => {
     modal.close();
 })
 
+// array for storing stories
+let storyData = [];
 
-
+// function for when post button is clicked
 function submitStory() {
-    const shareName = document.getElementById('shareName');
-    const name = shareName.value;
-    const shareStory = document.getElementById('shareStory');
-    const story = shareStory.value;
-    const divElement = document.createElement('div');
-    divElement.classList.add('storyCard');
-    divElement.innerHTML = '<h4>' + name + '</h4>';
-    const storyPost = `<p>` + story + `</p>`;
-    divElement.insertAdjacentHTML('beforeend', storyPost);
-    const subject = document.querySelector(".storyCards");
-    subject.appendChild(divElement);
-    modal.close();
+    let name = document.querySelector('#shareName').value;
+    let story = document.querySelector('#shareStory').value;
 
+    let storyDataObject = {
+        name: name,
+        story: story,
+    };
+
+    storyData.push(storyDataObject);
+
+    // store story data in localStorage
+    localStorage.setItem('storyData', JSON.stringify(storyData));
+
+    modal.close();
+    location.reload()
 }
+
+// On page reload, search localStorage for story data
+document.addEventListener('DOMContentLoaded', function () {
+    if (localStorage.getItem('storyData')) {
+
+        // parse localStorage data to JS object
+        storyData = JSON.parse(localStorage.getItem('storyData')); // get the saved data from localStorage
+
+        // loop through storyData array and display each story
+        for (let i = 0; i < storyData.length; i++) {
+            console.log(storyData[i].name);
+            console.log(storyData[i].story);
+
+            // create cards for displaying stories
+            const divElement = document.createElement('div');
+            divElement.classList.add('storyCard');
+            divElement.innerHTML = '<h4>' + storyData[i].name + '</h4>';
+            const storyPost = `<p>` + storyData[i].story + `</p>`;
+            divElement.insertAdjacentHTML('beforeend', storyPost);
+            const subject = document.querySelector(".storyCards");
+            subject.appendChild(divElement);
+        }
+    }
+});
