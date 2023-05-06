@@ -16,9 +16,9 @@ function myFunction() {
 }
 
 // Toggle between showing and hiding the story modal
-const openButton = document.querySelector('[data-open-modal]');
-const closeButton = document.querySelector('[closeShare]');
-const modal = document.querySelector('[data-modal]');
+const openButton = document.querySelector('#data-open-modal');
+const closeButton = document.querySelector('#closeShare');
+const modal = document.querySelector('#data-modal');
 
 openButton.addEventListener('click', () => {
     modal.showModal();

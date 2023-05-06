@@ -37,10 +37,21 @@ h1 {
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
-.topnav .links {
+.links {
     display: none;
-    margin-left: 87%;
+    margin-left: 83%;
     text-align: right;
+    background-color: #f1f1f1;
+    border: solid;
+    border-color: #0074d9;
+    border-radius: 10px;
+    text-align: center;
+    margin-right: .8%;
+    position: absolute;
+    top: 10%;
+    margin-top: 0;
+    box-shadow: 8px 8px 8px rgba(105, 105, 105, 0.8);
+
 }
 
 /* Style navigation menu links */
@@ -48,11 +59,7 @@ h1 {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: 'Paytone One', sans-serif;
-    font-size: 25px;
     display: block;
-    right: 0;
-    top: 0;
 }
 
 /* Style the hamburger menu */
@@ -63,6 +70,29 @@ h1 {
     right: 0;
     top: 0;
 
+}
+
+.navLinks {
+    font-family: 'Paytone One', sans-serif;
+    color: #188bff;
+    font-size: 280%;
+    margin-left: 1%;
+    padding: 10px;
+    text-decoration: none;
+    text-align: right;
+
+}
+
+@media screen and (max-width: 768px) {
+    .links {
+        margin-left: 50%;
+        margin-right: 2%;
+        top: 5%;
+    }
+
+    .navLinks {
+        font-size: 200%;
+    }
 }
 
 /*________________________________ABOUT.HTML CSS________________________________________*/
@@ -206,10 +236,11 @@ h2 {
     font-size: x-large;
     position: sticky;
     cursor: pointer;
-    position: sticky;
-    top: 100px;
-    left: 30px;
-    margin-bottom: 50px;
+    position: fixed;
+    bottom: 70px;
+    left: 83%;
+    box-shadow: 8px 8px 8px rgba(105, 105, 105, 0.8);
+
 }
 
 .shareModal {
@@ -356,36 +387,74 @@ dialog::backdrop {
 
 .storyCard {
     width: 25%;
-    height: 500px;
+    height: 600px;
     border: solid;
     border-color: #3f9fff;
     border-radius: 15px;
     border-width: 5px;
-    background-color: rgb(0, 89, 162);
+    background: linear-gradient(90deg, #005ab3 43%, #004b97 80%);
     margin: 20px;
+    box-shadow: 0 5px 8px rgba(105, 105, 105, 0.8);
+
 }
 
 .storyCard img {
     height: 120px;
     display: flex;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .storyCard h4 {
     font-family: 'Paytone One', sans-serif;
-    font-size: xx-large;
+    font-size: x-large;
     text-align: center;
     color: #eaeaea;
+    padding: 2%;
     margin: 0;
 }
 
 .storyCard p {
     font-family: 'Roboto', sans-serif;
-    font-size: large;
-    color: #eaeaea;
+    font-size: medium;
+    color: #535353;
     padding: 30px;
     text-align: center;
+    padding-top: 5%;
+    margin: 25px;
+    background-color: #e0e0e0;
+    height: 48%;
+    border-radius: 10px;
+    border: solid;
+    border-color: #0074d9;
+}
+
+@media screen and (max-width: 768px) {
+    .shareAbout {
+        font-size: large;
+    }
+
+    .share {
+        font-size: smaller;
+    }
+
+    .storyCard {
+        width: 80%;
+        margin: 10px;
+    }
+
+    .storyCard img {
+        height: 110px;
+    }
+
+    .storyCard h4 {
+        font-size: x-large;
+    }
+
+    .storyCard p {
+        font-size: medium;
+        height: 50%;
+    }
 }
 
 
@@ -437,10 +506,6 @@ dialog::backdrop {
         font-size: large;
     }
 
-    .B-logo {
-        height: 10%;
-    }
-
     .header {
         height: 80px;
     }
@@ -457,10 +522,6 @@ dialog::backdrop {
     .topnav a {
         padding: 8px 9px;
         font-size: 15px;
-    }
-
-    .share {
-        font-size: smaller;
     }
 }
 

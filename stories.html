@@ -15,24 +15,28 @@
 <body>
     <nav class="topnav">
         <h1>BLUE MINDS</h1>
-        <!-- Navigation links (hidden by default) -->
-        <div class="links" id="myLinks">
-            <a href="index.html">Home</a>
-            <a href="bookings.html">Bookings</a>
-            <a href="contacts.html">Contacts</a>
-            <a href="about.html">About</a>
-        </div>
         <!-- "Hamburger menu" -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
     </nav>
+    <!-- Navigation links (hidden by default) -->
+    <nav class="links" id="myLinks">
+        <a class="navLinks" href="index.html">Home</a>
+        <a class="navLinks" href="bookings.html">Bookings</a>
+        <a class="navLinks" href="contacts.html">Contacts</a>
+        <a class="navLinks" href="about.html">About</a>
+    </nav>
     <section>
         <h2>User Stories</h2>
-        <p class="shareAbout">Welcome to our stories page where users share their experiences using our site. This page is a collection of personal stories from individuals who have used our platform and want to share their journey with others. From overcoming challenges and achieving success to finding community and support, these stories offer insight into the diverse experiences of our users. We encourage everyone to share their stories, and we want to create a safe and respectful environment where users can express themselves freely. We hope that by reading these stories, you will gain a deeper understanding of our platform and the impact it has had on our users.</p>
-        <button data-open-modal class="share">SHARE YOUR STORY</button>
-        <dialog data-modal class="shareModal">
-            <button class="shareClose" closeShare>
+        <p class="shareAbout">Welcome to our stories page where users share their experiences using our site. This page is a collection of personal stories 
+            from individuals who have used our platform and want to share their journey with others. From overcoming challenges and achieving success to 
+            finding community and support, these stories offer insight into the diverse experiences of our users. We encourage everyone to share their stories, 
+            and we want to create a safe and respectful environment where users can express themselves freely. We hope that by reading these stories, you will 
+            gain a deeper understanding of our platform and the impact it has had on our users.</p>
+        <button id="data-open-modal" class="share">SHARE YOUR STORY</button>
+        <dialog id="data-modal" class="shareModal">
+            <button class="shareClose" id="closeShare">
                 <i class="fa fa-close"></i>
             </button>
             <h3 class="shareTitle">Share Your Story</h3>
