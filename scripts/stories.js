@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const divElement = document.createElement('div');
             divElement.classList.add('storyCard');
             divElement.innerHTML = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
-            const namePost = `<h4>` + storyData[i].name + `<h4>`;
+            const namePost = `<h3>` + storyData[i].name + `<h3>`;
             divElement.insertAdjacentHTML('beforeend', namePost);
             const storyPost = `<p>` + storyData[i].story + `</p>`;
             divElement.insertAdjacentHTML('beforeend', storyPost);
