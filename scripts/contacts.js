@@ -17,3 +17,12 @@ function googleTranslateElementInit() {
     );
 }
 
+/* The contacts list button to show a menu listing each specialist page */
+function contactFunction() {
+    var contact_link = document.getElementById("f_link");
+    if (contact_link.style.display === "block") {
+        contact_link.style.display = "none";
+    } else {
+        contact_link.style.display = "block";
+    }
+}
