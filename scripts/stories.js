@@ -6,7 +6,7 @@ if (typeof (Storage) !== "undefined") {
 }
 
 // Toggle between showing and hiding the navigation menu 
-function myFunction() {
+function navFunction() {
     var x = document.getElementById("myLinks");
     if (x.style.display === "flex") {
         x.style.display = "none";
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function googleTranslateElementInit() {
     new google.translate.TranslateElement(
-        {pageLanguage: 'en'},
+        { pageLanguage: 'en' },
         'google_translate_element'
     );
 }
