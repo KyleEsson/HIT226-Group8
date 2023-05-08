@@ -77,3 +77,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+
+/* Integrating Google Translate into the navigation bar */
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {pageLanguage: 'en'},
+        'google_translate_element'
+    );
+}

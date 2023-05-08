@@ -123,3 +123,12 @@ function myFunction() {
         x.style.display = "block";
     }
 }
+
+/* Integrating Google Translate into the navigation bar */
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {pageLanguage: 'en'},
+        'google_translate_element'
+    );
+}

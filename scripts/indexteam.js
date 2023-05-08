@@ -53,3 +53,13 @@ function displayTestimonials() {
 function displayServices() {
   alert('Contat us clicked');
 }
+
+
+/* Integrating Google Translate into the navigation bar */
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+      {pageLanguage: 'en'},
+      'google_translate_element'
+  );
+}

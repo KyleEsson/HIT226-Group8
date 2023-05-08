@@ -17,3 +17,15 @@ const wrapper = document.querySelector(".wrapper"),
             signupHeader.addEventListener("click", () => {
               wrapper.classList.remove("active");
             });
+
+
+
+
+/* Integrating Google Translate into the navigation bar */
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+      {pageLanguage: 'en'},
+      'google_translate_element'
+  );
+}
