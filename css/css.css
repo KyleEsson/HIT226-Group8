@@ -570,12 +570,18 @@ dialog::backdrop {
 
     float: center;
     float: right;
+    text-align: center;
+    color: #428edb;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: 'Paytone One', sans-serif;
+    padding: 0px;
+    margin: 0%;
 
     margin-right: 150px;
     margin-left: 100px;
     margin-top: 100px;
-    font-family: "Poppins",
-        sans-serif;
+    
     font-weight: bold;
     font-size: 50px;
     color: #009dff;
