@@ -14,7 +14,7 @@ body {
 
 
 section {
-    min-height: calc(100vh - 250px);
+    min-height: calc(100vh - 180px);
 }
 
 footer {
@@ -61,7 +61,10 @@ h1 {
     top: 7%;
     margin-top: 0;
     box-shadow: 8px 8px 8px rgba(105, 105, 105, 0.8);
+}
 
+.link {
+    width: 100%;
 }
 
 /* Style navigation menu links */
@@ -70,6 +73,7 @@ h1 {
     padding: 2px 16px;
     text-decoration: none;
     display: block;
+    cursor: pointer;
 }
 
 /* Style the hamburger menu */
@@ -89,7 +93,7 @@ h1 {
     margin-left: 1%;
     padding: 10px;
     text-decoration: none;
-
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -131,7 +135,7 @@ h2 {
 
 .card {
     background-color: #f6f6f6;
-    border: 3px solid #428edb;
+    border: 3px solid #006dda;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,7 +180,7 @@ h2 {
 }
 
 .card:hover {
-    background-color: #73c2ff4b;
+    background-color: #d373ff4b;
     transition-duration: 0.3s;
     transform: scale(1.10, 1.10);
     cursor: pointer;
@@ -213,7 +217,7 @@ h2 {
 
 #head {
     text-align: center;
-    color: #428edb;
+    color: #8100dd;
     font-size: 50px;
     margin-top: 10px;
     font-family: 'Paytone One', sans-serif;
@@ -440,13 +444,18 @@ dialog::backdrop {
     padding-top: 5%;
     margin: 25px;
     background-color: #e0e0e0;
-    height: 48%;
+    height: 270px;
     border-radius: 10px;
     border: solid;
     border-color: #0074d9;
 }
 
 @media screen and (max-width: 768px) {
+    .share {
+        width: 35%;
+        left: 63%;
+    }
+
     .shareAbout {
         font-size: large;
     }
