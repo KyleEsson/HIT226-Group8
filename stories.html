@@ -45,13 +45,13 @@
             </button>
             <h3 class="shareTitle">Share Your Story</h3>
             <img class="storyImg" src="images/story.png" alt="story book">
-            <form name="shareForm" action="" onsubmit="event.preventDefault();">
+            <form name="shareForm" onsubmit="event.preventDefault();">
                 <div>
-                    <label class="shareLabel" for="name" >Name or Alias</label>
+                    <label class="shareLabel">Name or Alias</label>
                     <input id="shareName" class="shareName" type="text" name="name" placeholder="Enter name or alias here....">
                 </div>
                 <div>
-                    <label class="shareLabel" for="avatar" >Pick an Avatar</label>
+                    <label class="shareLabel">Pick an Avatar</label>
                     <div>
                         <select class="shareSelect" name="avatar" id="shareSelect">
                             <option value="none">None</option>
@@ -63,8 +63,8 @@
                     </div>
                 </div>
                 <div>
-                    <label class="shareLabel" for="story">Share your story with others</label>
-                    <textarea id="shareStory" class="shareStory" name="story" id="storyShare" cols="10" rows="5" wrap="soft" placeholder="Enter the story you would like to share here...."></textarea>
+                    <label class="shareLabel">Share your story with others</label>
+                    <textarea id="shareStory" class="shareStory" name="story" cols="10" rows="5" wrap="soft" placeholder="Enter the story you would like to share here...."></textarea>
                 </div>
                 <img class="postBtn" src="images/post.png" alt="post button" onclick="submitStory()">
             </form>
