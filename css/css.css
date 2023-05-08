@@ -9,7 +9,6 @@ body {
     border: 0;
     outline: 0;
     overflow-x: hidden;
-
 }
 
 
@@ -22,6 +21,7 @@ footer {
     color: #f1f1f1;
     height: 50px;
     line-height: 0px;
+
 }
 
 footer p {
@@ -44,22 +44,27 @@ h1 {
     background: linear-gradient(90deg, #6700ac 13%, #0056ac 100%);
     position: relative;
     top: 1%;
+    border: solid;
+    border-color: #009dff;
+    border-width: 2px;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
 .links {
     display: none;
-    margin-left: 83%;
+    flex-direction: column;
+    width: 250px;
+    margin-right: .8%;
+    margin-top: 0;
+    padding-right: 40px;
     text-align: right;
     background-color: #f1f1f1;
     border: solid;
     border-color: #6700ac;
     border-radius: 10px;
-    text-align: center;
-    margin-right: .8%;
     position: absolute;
-    top: 7%;
-    margin-top: 0;
+    top: 6%;
+    right: .5%;
     box-shadow: 8px 8px 8px rgba(105, 105, 105, 0.8);
 }
 
@@ -101,6 +106,8 @@ h1 {
         margin-left: 50%;
         margin-right: 2%;
         top: 5%;
+        width: 150px;
+        position: sticky;
     }
 
     .navLinks {
@@ -113,6 +120,15 @@ h1 {
 
     .icon i {
         font-size: 40px;
+    }
+
+    section {
+        min-height: calc(100vh - 145px);
+    }
+
+    .topnav {
+        position: sticky;
+        top: 0;
     }
 }
 
@@ -255,7 +271,6 @@ h2 {
     padding: 10px 10px;
     font-family: 'Paytone One', sans-serif;
     font-size: x-large;
-    position: sticky;
     cursor: pointer;
     position: fixed;
     bottom: 70px;
@@ -555,7 +570,7 @@ dialog::backdrop {
 
     float: center;
     float: right;
-    
+
     margin-right: 150px;
     margin-left: 100px;
     margin-top: 100px;
@@ -573,7 +588,7 @@ dialog::backdrop {
     box-sizing: border-box;
     font-family: "Poppins",
         sans-serif;
-    
+
     margin-left: 10px;
     margin-top: 40px;
     margin-bottom: 20px;
