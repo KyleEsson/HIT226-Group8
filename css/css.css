@@ -329,14 +329,14 @@ dialog::backdrop {
     font-size: 20px;
     position: relative;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .shareName {
     width: 95%;
     height: 1%;
-    padding: 10px;
-    margin-bottom: 35px;
+    padding: 5px;
+    margin-bottom: 15px;
     margin-top: 5px;
     border: solid;
     border-color: #6700ac;
@@ -360,7 +360,7 @@ dialog::backdrop {
     background-color: #eaeaea;
     font-size: larger;
     font-family: 'Roboto', sans-serif;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     margin-top: 5px;
 }
 
@@ -500,6 +500,18 @@ dialog::backdrop {
     .storyCard p {
         font-size: medium;
         height: 50%;
+    }
+
+    .shareTitle {
+        font-size: 20px;
+    }
+
+    .storyImg {
+        width: 50%;
+    }
+
+    .shareStory {
+        height: 10%;
     }
 }
 
