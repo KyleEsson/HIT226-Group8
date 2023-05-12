@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (localStorage.getItem('storyData')) {
 
         // parse localStorage data to JS object
-        storyData = JSON.parse(localStorage.getItem('storyData')); // get the saved data from localStorage
+        storyData = JSON.parse(localStorage.getItem('storyData'));
 
         // loop through storyData array and display each story
         for (let i = 0; i < storyData.length; i++) {
@@ -77,6 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+
 
 
 /* Integrating Google Translate into the navigation bar */

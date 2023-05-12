@@ -63,3 +63,30 @@ function googleTranslateElementInit() {
     'google_translate_element'
   );
 }
+
+
+// On page reload, search localStorage for story data
+document.addEventListener('DOMContentLoaded', function () {
+  if (localStorage.getItem('storyData')) {
+
+    // parse localStorage data to JS object
+    storyData = JSON.parse(localStorage.getItem('storyData'));
+
+    // loop through storyData array and display each story
+    for (let i = storyData.length - 3; i < storyData.length; i++) {
+      console.log(storyData[i].name);
+      console.log(storyData[i].story);
+
+      // create cards for displaying stories
+      const divElement = document.createElement('div');
+      divElement.classList.add('storyCard');
+      divElement.innerHTML = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
+      const namePost = `<h3>` + storyData[i].name + `<h3>`;
+      divElement.insertAdjacentHTML('beforeend', namePost);
+      const storyPost = `<p>` + storyData[i].story + `</p>`;
+      divElement.insertAdjacentHTML('beforeend', storyPost);
+      const subject = document.querySelector(".storyCards");
+      subject.appendChild(divElement);
+    }
+  }
+});
