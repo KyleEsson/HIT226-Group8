@@ -18,12 +18,14 @@ section {
 }
 
 .footerBanner {
-    background: linear-gradient(360deg, #005ab4 3%, #6700ac 100%);
+    background-image: linear-gradient(to bottom, #f5f5f5, #bcb0dc, #baa8db, #a685ce, #9661bf, #8a54ba, #7d47b5, #6f3ab0, #5d44b5, #494db9, #3054bb, #005abb);
+    /* background: linear-gradient(360deg, #005ab4 3%, #6700ac 100%); */
     color: #f1f1f1;
-    height: 240px;
+    height: 340px;
     display: flex;
     flex-direction: row;
     align-content: center;
+    margin-top: 5%;
 }
 
 .footerBanner h5 {
@@ -32,7 +34,7 @@ section {
     padding-left: 25px;
     font-size: xx-large;
     margin-bottom: 5px;
-    margin-top: 3%;
+    margin-top: 20%;
 }
 
 .footerBanner a {
@@ -61,7 +63,7 @@ section {
 }
 
 .footerClose {
-    background: #005ab4;
+    background: #005abb;
     height: 65px;
 }
 
@@ -194,6 +196,7 @@ h1 {
 
     .footerBanner h5 {
         font-size: large;
+        margin-top: 65%;
     }
 
     .footerBanner a {
@@ -201,11 +204,15 @@ h1 {
     }
 
     .footerBanner {
-        height: 200px;
+        height: 300px;
     }
 
     .footerLinks {
         width: 30%;
+    }
+
+    .footerClose {
+        font-size: small;
     }
 }
 
@@ -619,7 +626,9 @@ dialog::backdrop {
     border-color: #3f9fff;
     border-radius: 15px;
     border-width: 5px;
-    background: linear-gradient(100deg, #6700ac 13%, #004b97 90%);
+    background-image: linear-gradient(to right, #005abb, #3054bb, #494db9, #5d44b5, #6f3ab0, #6f3ab0, #6f3ab0, #6f3ab0, #5d44b5, #494db9, #3054bb, #005abb);
+    /* background-image: linear-gradient(to left bottom, #005abb, #3054bb, #494db9, #5d44b5, #6f3ab0, #6f3ab0, #6f3ab0, #6f3ab0, #5d44b5, #494db9, #3054bb, #005abb); */
+    /* background: linear-gradient(100deg, #6700ac 13%, #004b97 90%); */
     margin: 20px;
     box-shadow: 0 5px 8px rgba(105, 105, 105, 0.8);
 
