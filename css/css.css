@@ -14,26 +14,27 @@ body {
 
 section {
     min-height: calc(100vh - 186px);
-    #005ab4
 }
 
-footer {
-    background: linear-gradient(90deg, #005ab4 13%, #6700ac 100%);
+.footerBanner {
+    background: linear-gradient(360deg, #005ab4 3%, #6700ac 100%);
     color: #f1f1f1;
-    height: 350px;
+    height: 240px;
     display: flex;
-    flex-direction: wrap;
+    flex-direction: row;
+    align-content: center;
 }
 
-footer h5 {
+.footerBanner h5 {
     font-family: 'Roboto', sans-serif;
     padding-top: 0px;
     padding-left: 25px;
     font-size: xx-large;
     margin-bottom: 5px;
+    margin-top: 3%;
 }
 
-footer a {
+.footerBanner a {
     color: #f1f1f1;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
@@ -46,15 +47,48 @@ footer a {
 }
 
 .footerLinks {
-    width: 30%;
+    width: 33%;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
+.footerLine:after {
+    content: " ";
+    display: block;
+    border-bottom: 3px solid #ffffff;
+}
+
+.footerClose {
+    background: #005ab4;
+    height: 65px;
+}
+
+.footerClose p {
+    color: #ffffff;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+    width: 48%;
+    display: block;
+    float: left;
+    padding-left: 1%;
+}
+
+.footerClose a {
+    color: #ffffff;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    float: right;
+    text-align: right;
+    width: 50%;
+    padding-top: 18px;
+    padding-right: 1%;
+}
+
 /* Style the navigation menu */
 h1 {
-    font-family: 'Paytone One', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #60b0ff;
     font-size: 280%;
     margin: 0;
@@ -155,6 +189,22 @@ h1 {
         border: solid;
         border-color: #009dff;
         border-width: 2px;
+    }
+
+    .footerBanner h5 {
+        font-size: large;
+    }
+
+    .footerBanner a {
+        font-size: medium;
+    }
+
+    .footerBanner {
+        height: 200px;
+    }
+
+    .footerLinks {
+        width: 30%;
     }
 }
 
