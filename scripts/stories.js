@@ -36,11 +36,13 @@ function submitStory() {
     let name = document.querySelector('#shareName').value;
     let story = document.querySelector('#shareStory').value;
     let avatar = document.querySelector('#shareSelect').value;
+    let intro = document.querySelector('#shareIntro').value;
 
     let storyDataObject = {
         name: name,
-        story: story,
         avatar: avatar,
+        intro: intro,
+        story: story,
     };
 
     storyData.push(storyDataObject);
@@ -67,18 +69,37 @@ document.addEventListener('DOMContentLoaded', function () {
             // create cards for displaying stories
             const divElement = document.createElement('div');
             divElement.classList.add('storyCard');
+            divElement.onclick = function () {
+                const modalElement = document.createElement('dialog');
+                modalElement.classList.add('storyModal');
+                modalElement.innerHTML = '<button class="shareClose" id="storyClose" onclick="closeStory()" ><i class="fa fa-close"></i></button>';
+                const img = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
+                modalElement.insertAdjacentHTML('beforeend', img);
+                const namePost = `<h3>` + storyData[i].name + `<h3>`;
+                modalElement.insertAdjacentHTML('beforeend', namePost);
+                const storyPost = `<p>` + storyData[i].story + `</p>`;
+                modalElement.insertAdjacentHTML('beforeend', storyPost);
+                const object = document.querySelector(".storyModals");
+                object.appendChild(modalElement);
+                const storyModal = document.querySelector('.storyModal');
+                storyModal.showModal();
+            }
             divElement.innerHTML = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
             const namePost = `<h3>` + storyData[i].name + `<h3>`;
             divElement.insertAdjacentHTML('beforeend', namePost);
-            const storyPost = `<p>` + storyData[i].story + `</p>`;
+            const storyPost = `<p>` + storyData[i].intro + `</p>`;
             divElement.insertAdjacentHTML('beforeend', storyPost);
+            const readStory = '<button class="readStory">Read Story</button>';
+            divElement.insertAdjacentHTML('beforeend', readStory);
             const subject = document.querySelector(".storyCards");
             subject.appendChild(divElement);
         }
     }
 });
 
-
+function closeStory() {
+    location.reload()
+}
 
 
 /* Integrating Google Translate into the navigation bar */

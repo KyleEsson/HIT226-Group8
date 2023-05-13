@@ -18,10 +18,10 @@ section {
 }
 
 .footerBanner {
-    background-image: linear-gradient(to bottom, #f5f5f5, #bcb0dc, #baa8db, #a685ce, #9661bf, #8a54ba, #7d47b5, #6f3ab0, #5d44b5, #494db9, #3054bb, #005abb);
-    /* background: linear-gradient(360deg, #005ab4 3%, #6700ac 100%); */
+    /* background-image: linear-gradient(to bottom, #f5f5f5, #bcb0dc, #baa8db, #a685ce, #9661bf, #8a54ba, #7d47b5, #6f3ab0, #5d44b5, #494db9, #3054bb, #005abb); */
+    background: linear-gradient(360deg, #005ab4 3%, #6700ac 100%);
     color: #f1f1f1;
-    height: 340px;
+    height: 280px;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -34,7 +34,7 @@ section {
     padding-left: 25px;
     font-size: xx-large;
     margin-bottom: 5px;
-    margin-top: 20%;
+    margin-top: 05%;
 }
 
 .footerBanner a {
@@ -531,13 +531,23 @@ dialog::backdrop {
     font-size: 20px;
     position: relative;
     text-align: center;
-    margin-bottom: 5px;
+}
+
+.shareValid {
+    padding: 0;
+    padding-left: 2px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(81, 81, 81);
 }
 
 .shareName {
     width: 95%;
     height: 1%;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 15px;
     margin-top: 5px;
     border: solid;
@@ -606,8 +616,25 @@ dialog::backdrop {
     border-color: #6700ac;
     border-radius: 5px;
     background-color: #eaeaea;
-    line-height: 30px;
+    line-height: 20px;
     padding-bottom: 200px;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    resize: none;
+}
+
+.shareBrief {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    border: solid;
+    border-width: 2px;
+    border-color: #6700ac;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    line-height: 20px;
+    padding-bottom: 5px;
     font-family: 'Roboto', sans-serif;
     font-size: larger;
     resize: none;
@@ -630,22 +657,23 @@ dialog::backdrop {
 }
 
 .storyCard {
-    width: 25%;
-    height: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 320px;
     border: solid;
-    border-color: #3f9fff;
+    border-color: #0068d0;
     border-radius: 15px;
-    border-width: 5px;
-    background-image: linear-gradient(to right, #005abb, #3054bb, #494db9, #5d44b5, #6f3ab0, #6f3ab0, #6f3ab0, #6f3ab0, #5d44b5, #494db9, #3054bb, #005abb);
-    /* background-image: linear-gradient(to left bottom, #005abb, #3054bb, #494db9, #5d44b5, #6f3ab0, #6f3ab0, #6f3ab0, #6f3ab0, #5d44b5, #494db9, #3054bb, #005abb); */
-    /* background: linear-gradient(100deg, #6700ac 13%, #004b97 90%); */
+    border-width: 3px;
+    background-color: #f0f0f0;
     margin: 20px;
     box-shadow: 0 5px 8px rgba(105, 105, 105, 0.8);
+    cursor: pointer;
 
 }
 
 .storyCard img {
-    height: 120px;
+    height: 80px;
     display: flex;
     margin: auto;
     margin-top: 20px;
@@ -655,7 +683,7 @@ dialog::backdrop {
     font-family: 'Merriweather Sans', sans-serif;
     font-size: x-large;
     text-align: center;
-    color: #eaeaea;
+    color: #0063e3;
     padding: 2%;
     margin: 0;
 }
@@ -664,22 +692,30 @@ dialog::backdrop {
     font-family: 'Roboto', sans-serif;
     font-size: medium;
     color: #535353;
-    padding: 30px;
+    padding: 10px;
     text-align: center;
     padding-top: 5%;
-    margin: 25px;
-    background-color: #e0e0e0;
-    height: 270px;
-    border-radius: 10px;
-    border: solid;
-    border-color: #0074d9;
+    margin: 5px;
+    height: 150px;
+}
+
+.readStory {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background-color: #0068d0;
+    border-color: #7100d400;
+    border-radius: 0 0 7px 7px;
+    color: #ffffff;
+    font: 'Roboto', sans-serif;
+    font-size: large;
 }
 
 @media screen and (max-width: 768px) {
     .share {
         width: 35%;
         left: 2%;
-        top: 4.5%;
+        top: 4.2%;
         height: 2.5%;
         padding: 0;
     }
@@ -693,12 +729,12 @@ dialog::backdrop {
     }
 
     .storyCard {
-        width: 80%;
+        /* width: 80%; */
         margin: 10px;
     }
 
     .storyCard img {
-        height: 110px;
+        height: 70px;
     }
 
     .storyCard h4 {
