@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function () {
             divElement.innerHTML = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
             const namePost = `<h3>` + storyData[i].name + `<h3>`;
             divElement.insertAdjacentHTML('beforeend', namePost);
+            // const breakLine = `<div class="cardLine"></div>`;
+            // divElement.insertAdjacentHTML('beforeend', breakLine);
             const storyPost = `<p>` + storyData[i].intro + `</p>`;
             divElement.insertAdjacentHTML('beforeend', storyPost);
             const readStory = '<button class="readStory">Read Story</button>';

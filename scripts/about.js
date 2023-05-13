@@ -76,7 +76,10 @@ function preloadImages(e) {
     }
 }
 
-const anxT = ""
+document.addEventListener('DOMContentLoaded', function () {
+    head.innerText = (seek.title);
+    details.innerText = (seek.info);
+})
 
 fetch('../scripts/about.json')
     .then(res => res.json())
