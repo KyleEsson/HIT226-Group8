@@ -14,18 +14,18 @@ body {
 
 
 section {
-    min-height: calc(100vh - 186px);
+    min-height: calc(100vh - 470px);
 }
 
 .footerBanner {
     /* background-image: linear-gradient(to bottom, #f5f5f5, #bcb0dc, #baa8db, #a685ce, #9661bf, #8a54ba, #7d47b5, #6f3ab0, #5d44b5, #494db9, #3054bb, #005abb); */
-    background: linear-gradient(360deg, #005ab4 3%, #6700ac 100%);
+    background: linear-gradient(360deg, #005ab4 3%, #6700ac 85%);
     color: #f1f1f1;
     height: 280px;
     display: flex;
     flex-direction: row;
     align-content: center;
-    margin-top: 5%;
+    margin-top: 0;
 }
 
 .footerBanner h5 {
@@ -89,27 +89,73 @@ section {
     padding-right: 12%;
 }
 
+.navWave {
+    position: absolute;
+    top: 5.75%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.navWave svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 102px;
+}
+
+.navWave .nav-shape-fill {
+    fill: #6700ac;
+}
+
+.footWave {
+    position: relative;
+    bottom: 25%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: #6700ac;
+    margin: 0;
+    padding: 0;
+}
+
+.footWave svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 122px;
+}
+
+.footWave .nav-shape-fill {
+    fill: #f1f1f1;
+}
+
 /* Style the navigation menu */
 h1 {
     font-family: 'Merriweather Sans', sans-serif;
     color: #60b0ff;
-    font-size: 280%;
+    font-size: 360%;
     margin: 0;
     margin-left: 1%;
 }
 
 .topnav {
-    background: linear-gradient(90deg, #6700ac 13%, #0056ac 100%);
-    position: sticky;
+    /* background: linear-gradient(90deg, #6700ac 13%, #0056ac 100%); */
+    background-color: #6700ac;
+    position: relative;
     top: 0;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
 .links {
     display: none;
+    position: relative;
+    z-index: 100;
     flex-direction: column;
     width: 250px;
-    margin-right: .8%;
+    margin-right: .4%;
     margin-top: 0;
     padding-right: 40px;
     text-align: right;
@@ -118,9 +164,9 @@ h1 {
     border-color: #6700ac;
     border-radius: 10px;
     position: fixed;
-    top: 6%;
-    right: .5%;
-    box-shadow: 8px 8px 8px rgba(105, 105, 105, 0.8);
+    top: .8%;
+    right: 4%;
+    /* box-shadow: 8px 8px 8px rgba(105, 105, 105, 0.8); */
 }
 
 .link {
@@ -129,7 +175,7 @@ h1 {
 
 /* Style navigation menu links */
 .topnav .icon {
-    color: rgb(194, 139, 215);
+    color: rgb(116, 167, 255);
     padding: 2px 16px;
     text-decoration: none;
     display: block;
@@ -140,9 +186,9 @@ h1 {
 .icon i {
     display: flex;
     position: absolute;
-    font-size: 50px;
+    font-size: 80px;
     right: 1%;
-    top: 10%;
+    top: 3%;
 
 }
 
@@ -163,19 +209,18 @@ h1 {
 
 @media screen and (max-width: 768px) {
     .links {
-        margin-left: 50%;
-        margin-right: 2%;
-        top: 5%;
-        width: 150px;
+        right: 40px;
+        top: 2px;
+        width: 110px;
         position: fixed;
     }
 
     .navLinks {
-        font-size: 200%;
+        font-size: 150%;
     }
 
     h1 {
-        font-size: xx-large;
+        font-size: 220%;
     }
 
     .icon i {
@@ -189,6 +234,23 @@ h1 {
     .topnav {
         position: sticky;
         top: 0;
+    }
+
+    .navWave {
+        top: 4.0%;
+        position: fixed;
+    }
+
+    .navWave svg {
+        height: 40px;
+    }
+
+    .footWave {
+        bottom: -63%;
+    }
+
+    .footWave svg {
+        height: 40px;
     }
 
     .footerBanner h5 {
@@ -449,6 +511,7 @@ h2 {
     font-size: x-large;
     margin-left: 2%;
     margin-right: 2%;
+    margin-bottom: 5%;
     color: #636363;
 }
 
@@ -475,7 +538,7 @@ h2 {
     font-size: x-large;
     cursor: pointer;
     position: fixed;
-    top: 90px;
+    top: 150px;
     left: 1%;
     box-shadow: 8px 8px 8px rgba(105, 105, 105, 0.8);
 
@@ -649,6 +712,7 @@ dialog::backdrop {
     justify-content: center;
     align-items: center;
     margin-top: 60px;
+    margin-bottom: 0%;
 }
 
 .storyCard {
@@ -662,6 +726,7 @@ dialog::backdrop {
     border-width: 3px;
     background-color: #f0f0f0;
     margin: 20px;
+    margin-bottom: 60px;
     box-shadow: 0 5px 8px rgba(105, 105, 105, 0.8);
     cursor: pointer;
 
@@ -701,6 +766,7 @@ dialog::backdrop {
 }
 
 .readStory {
+    display: none;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -711,6 +777,14 @@ dialog::backdrop {
     font: 'Roboto', sans-serif;
     font-size: large;
     cursor: pointer;
+}
+
+.storyCard:hover .readStory {
+    display: block;
+}
+
+.storyCard:hover {
+    background-color: #f3e2ff;
 }
 
 .storyModal {
@@ -743,21 +817,26 @@ dialog::backdrop {
     padding: 0;
 }
 
+/* .storyCard .wave {
+    top: 1.75%;
+} */
+
 @media screen and (max-width: 768px) {
     .share {
         width: 35%;
         left: 2%;
-        top: 4.2%;
+        top: 6.2%;
         height: 2.5%;
         padding: 0;
+        font-size: smaller;
+    }
+
+    h2 {
+        margin-top: 12%;
     }
 
     .shareAbout {
         font-size: large;
-    }
-
-    .share {
-        font-size: smaller;
     }
 
     .storyCard {
