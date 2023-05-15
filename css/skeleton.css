@@ -141,7 +141,6 @@ h1 {
 }
 
 .topnav {
-    /* background: linear-gradient(90deg, #6700ac 13%, #0056ac 100%); */
     background-color: #6700ac;
     position: relative;
     top: 0;
@@ -156,7 +155,7 @@ h1 {
     width: 250px;
     margin-right: .4%;
     margin-top: 0;
-    padding-right: 40px;
+    padding-right: 0px;
     text-align: right;
     background-color: #f1f1f1;
     border: solid;
@@ -185,7 +184,7 @@ h1 {
 .icon i {
     display: flex;
     position: absolute;
-    font-size: 80px;
+    font-size: 60px;
     right: 1%;
     top: 3%;
 
