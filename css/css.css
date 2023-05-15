@@ -279,36 +279,57 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    margin: 20px 0;
   }
   
   .mood {
-    font-size: 3rem;
-    margin: 1rem;
+    font-size: 60px;
+    margin: 0 10px;
     cursor: pointer;
-    animation-name: spin;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation: spin 2s linear infinite;
   }
   
   @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
   }
   
-  .submit-button {
-    text-align: center;
-    margin-top: 10rem;
-    align-items: center;
+  .happy {
+    color: #FFC107;
+  }
+  
+  .neutral {
+    color: #9E9E9E;
+  }
+  
+  .sad {
+    color: #607D8B;
+  }
+  
+  .counter-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
   }
   
   .counter {
-    text-align: center;
-    margin-top: 2rem;
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  .happy-counter {
+    color: #FFC107;
+  }
+  
+  .sad-counter {
+    color: #607D8B;
+  }
+  
+  button {
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 10px 20px;
   }
 
 /*________________________________ABOUT.HTML CSS________________________________________*/
