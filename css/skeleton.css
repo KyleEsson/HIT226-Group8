@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    overflow-x: hidden;
+}
+
+
+section {
+    min-height: calc(100vh - 470px);
+}
+
+.footerBanner {
+    /* background-image: linear-gradient(to bottom, #f5f5f5, #bcb0dc, #baa8db, #a685ce, #9661bf, #8a54ba, #7d47b5, #6f3ab0, #5d44b5, #494db9, #3054bb, #005abb); */
+    background: linear-gradient(360deg, #005ab4 3%, #6700ac 85%);
+    color: #f1f1f1;
+    height: 280px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-top: 0;
+}
+
+.footerBanner h5 {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 0px;
+    padding-left: 25px;
+    font-size: xx-large;
+    margin-bottom: 5px;
+    margin-top: 05%;
+}
+
+.footerBanner a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    padding-left: 25px;
+    padding-top: 10px;
+    display: block;
+    text-decoration: underline;
+    margin-top: 0;
+}
+
+.footerLinks {
+    width: 33%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.footerLine:after {
+    content: " ";
+    display: block;
+    border-bottom: 3px solid #ffffff;
+}
+
+.footerClose {
+    background: #005abb;
+    height: 65px;
+}
+
+.footerClose p {
+    color: #ffffff;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+    width: 38%;
+    display: block;
+    float: left;
+    padding-left: 12%;
+}
+
+.footerClose a {
+    color: #ffffff;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    float: right;
+    text-align: right;
+    width: 38%;
+    padding-top: 18px;
+    padding-right: 12%;
+}
+
+.navWave {
+    position: absolute;
+    top: 5.75%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.navWave svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 102px;
+}
+
+.navWave .nav-shape-fill {
+    fill: #6700ac;
+}
+
+.footWave {
+    position: relative;
+    bottom: 25%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background-color: #6700ac;
+    margin: 0;
+    padding: 0;
+}
+
+.footWave svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 122px;
+}
+
+.footWave .nav-shape-fill {
+    fill: #f1f1f1;
+}
+
+/* Style the navigation menu */
+h1 {
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #60b0ff;
+    font-size: 360%;
+    margin: 0;
+    margin-left: 1%;
+}
+
+.topnav {
+    /* background: linear-gradient(90deg, #6700ac 13%, #0056ac 100%); */
+    background-color: #6700ac;
+    position: relative;
+    top: 0;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.links {
+    display: none;
+    position: relative;
+    z-index: 100;
+    flex-direction: column;
+    width: 250px;
+    margin-right: .4%;
+    margin-top: 0;
+    padding-right: 40px;
+    text-align: right;
+    background-color: #f1f1f1;
+    border: solid;
+    border-color: #6700ac;
+    border-radius: 10px;
+    position: fixed;
+    top: .8%;
+    right: 4%;
+    /* box-shadow: 8px 8px 8px rgba(105, 105, 105, 0.8); */
+}
+
+.link {
+    width: 100%;
+}
+
+/* Style navigation menu links */
+.topnav .icon {
+    color: rgb(116, 167, 255);
+    padding: 2px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+/* Style the hamburger menu */
+.icon i {
+    display: flex;
+    position: absolute;
+    font-size: 80px;
+    right: 1%;
+    top: 3%;
+
+}
+
+.navLinks {
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #6700ac;
+    font-size: 300%;
+    margin-left: 1%;
+    padding: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.trans {
+    margin-left: 6%;
+    padding: 10%;
+}
+
+h2 {
+    font-family: 'Merriweather Sans';
+    font-size: 400%;
+    text-align: center;
+    color: #428edb;
+    text-shadow: 1px 1px 1px rgba(90, 90, 90, 0.51);
+
+}
+
+@media screen and (max-width: 768px) {
+    .links {
+        right: 40px;
+        top: 2px;
+        width: 110px;
+        position: fixed;
+    }
+
+    .navLinks {
+        font-size: 150%;
+    }
+
+    h1 {
+        font-size: 220%;
+    }
+
+    .icon i {
+        font-size: 40px;
+    }
+
+    section {
+        min-height: calc(100vh - 145px);
+    }
+
+    .topnav {
+        position: sticky;
+        top: 0;
+    }
+
+    .navWave {
+        top: 4.0%;
+        position: fixed;
+    }
+
+    .navWave svg {
+        height: 40px;
+    }
+
+    .footWave {
+        bottom: -63%;
+    }
+
+    .footWave svg {
+        height: 40px;
+    }
+
+    .footerBanner h5 {
+        font-size: medium;
+        margin-top: 25%;
+    }
+
+    .footerBanner a {
+        font-size: small;
+    }
+
+    .footerBanner {
+        height: 200px;
+    }
+
+    .footerLinks {
+        width: 30%;
+    }
+
+    .footerClose {
+        font-size: small;
+    }
+}

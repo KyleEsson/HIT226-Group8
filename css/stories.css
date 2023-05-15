@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&family=Roboto:wght@400;500;700&display=swap');
+
+
+.shareAbout {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: x-large;
+    margin-left: 2%;
+    margin-right: 2%;
+    color: #636363;
+    margin-bottom: 40px;
+}
+
+.share {
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 10px;
+    border-style: solid;
+    color: #6700ac;
+    padding: 10px 10px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: x-large;
+    cursor: pointer;
+    position: fixed;
+    top: 150px;
+    left: 1%;
+    box-shadow: 8px 8px 8px rgba(105, 105, 105, 0.8);
+
+}
+
+.shareModal {
+    background-color: #f6f6f6;
+    border-color: #6700ac;
+    border-radius: 10px;
+}
+
+dialog::backdrop {
+    background-color: hsla(0, 0%, 40%, 0.701);
+}
+
+.shareClose {
+    position: absolute;
+    font-size: 20px;
+    right: 0;
+    top: 0;
+    border: none;
+    color: #6700ac;
+    padding-top: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.shareTitle {
+    color: #6700ac;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 30px;
+    position: relative;
+    top: -30px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.storyImg {
+    position: relative;
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+.shareLabel {
+    color: #6700ac;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.shareValid {
+    padding: 0;
+    padding-left: 2px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: rgb(81, 81, 81);
+}
+
+.shareName {
+    width: 95%;
+    height: 1%;
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border: solid;
+    border-color: #6700ac;
+    border-width: 2px;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+}
+
+/* Custom select menu */
+.shareSelect {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    border: solid;
+    border-color: #6700ac;
+    border-width: 2px;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #eaeaea;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+/* Dropdown arrow */
+.shareSelect:after {
+    position: absolute;
+    top: 50%;
+    right: 1.25rem;
+    display: inline-block;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-top: -.15rem;
+    pointer-events: none;
+    border-top: .35rem solid;
+    border-right: .35rem solid transparent;
+    border-bottom: .35rem solid transparent;
+    border-left: .35rem solid transparent;
+}
+
+/* Focus */
+.shareSelect select:focus {
+    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
+}
+
+/* Active/open */
+.shareSelect select:active {
+    color: #bcbcbc;
+    background-color: #0074d9;
+}
+
+
+.shareStory {
+    width: 95%;
+    height: 50%;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border: solid;
+    border-width: 2px;
+    border-color: #6700ac;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    line-height: 20px;
+    padding-bottom: 200px;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    resize: none;
+}
+
+.shareBrief {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    border: solid;
+    border-width: 2px;
+    border-color: #6700ac;
+    border-radius: 5px;
+    background-color: #eaeaea;
+    line-height: 20px;
+    padding-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    resize: none;
+}
+
+.postBtn {
+    position: relative;
+    display: flex;
+    width: 20%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.storyCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 0%;
+}
+
+.storyCard {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 320px;
+    border: solid;
+    border-color: #0068d0;
+    border-radius: 15px;
+    border-width: 3px;
+    background-color: #f0f0f0;
+    margin: 20px;
+    margin-bottom: 60px;
+    box-shadow: 0 5px 8px rgba(105, 105, 105, 0.8);
+    cursor: pointer;
+
+}
+
+.storyCard img {
+    height: 80px;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.storyCard h3 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: x-large;
+    text-align: center;
+    color: #0063e3;
+    padding: 2%;
+    margin: 0;
+}
+
+.cardLine:after {
+    content: " ";
+    display: block;
+    border-bottom: 2px solid #4e4e4e;
+}
+
+.storyCard p {
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    color: #535353;
+    padding: 10px;
+    text-align: center;
+    padding-top: 5%;
+    margin: 5px;
+    height: 150px;
+}
+
+.readStory {
+    display: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background-color: #0068d0;
+    border-color: #7100d400;
+    border-radius: 0 0 7px 7px;
+    color: #ffffff;
+    font: 'Roboto', sans-serif;
+    font-size: large;
+    cursor: pointer;
+}
+
+.storyCard:hover .readStory {
+    display: block;
+}
+
+.storyCard:hover {
+    background-color: #f3e2ff;
+}
+
+.storyModal {
+    width: 60%;
+    border: solid;
+    border-radius: 20px;
+    border-color: #6700ac;
+    background-color: #f0efef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: #6700ac;
+}
+
+.storyModal img {
+    width: 100px;
+}
+
+.storyModal p {
+    font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
+    padding: 5%;
+}
+
+.storyModal h3 {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 300%;
+    color: #0063e3;
+    margin: 0;
+    padding: 0;
+}
+
+/* .storyCard .wave {
+    top: 1.75%;
+} */
+
+@media screen and (max-width: 768px) {
+    .share {
+        width: 35%;
+        left: 2%;
+        top: 6.2%;
+        height: 2.5%;
+        padding: 0;
+        font-size: smaller;
+    }
+
+    h2 {
+        margin-top: 12%;
+    }
+
+    .shareAbout {
+        font-size: large;
+    }
+
+    .storyCard {
+        /* width: 80%; */
+        margin: 10px;
+    }
+
+    .storyCard img {
+        height: 70px;
+    }
+
+    .storyCard h4 {
+        font-size: x-large;
+    }
+
+    .storyCard p {
+        font-size: medium;
+        height: 50%;
+    }
+
+    .shareTitle {
+        font-size: 20px;
+    }
+
+    .storyImg {
+        width: 50%;
+    }
+
+    .shareStory {
+        height: 10%;
+    }
+
+    .storyModal p {
+        font-size: medium;
+    }
+
+    .storyModal h3 {
+        font-size: x-large;
+    }
+}
