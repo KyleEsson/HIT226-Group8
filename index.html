@@ -71,15 +71,24 @@
       </div>
 
       <div class="mood-box">
-        <h3>How are you feeling today?</h3>
-        <div class="mood-options">
-          <button class="mood-button happy" data-mood="Happy">😀</button>
-          <button class="mood-button neutral" data-mood="Neutral">😐</button>
-          <button class="mood-button sad" data-mood="Sad">😔</button>
+        <div class="mood" id="happy-mood" onclick="setMood('happy')">
+          😀
         </div>
-        <p class="selected-mood">You haven't selected a mood yet.</p>
-        <button class="submit-button">Submit</button>
+        <div class="mood" id="neutral-mood" onclick="setMood('neutral')">
+          😐
+        </div>
+        <div class="mood" id="sad-mood" onclick="setMood('sad')">
+          😔
+        </div>
+        <div class="submit-button">
+          <button onclick="submitMood()">Submit</button>
+        </div>
+        <div class="counter">
+          <p>Happy: <span id="happy-count">0</span></p>
+          <p>Sad: <span id="sad-count">0</span></p>
+        </div>
       </div>
+
       <div>
         <h3 class="latestStories">Latest User Stories</h3>
         <div class="storyCards">
