@@ -71,18 +71,17 @@
       </div>
 
       <div class="mood-box">
-        <div class="mood" id="happy-mood" onclick="setMood('happy')">😀</div>
-        <div class="mood" id="neutral-mood" onclick="setMood('neutral')">😐</div>
-        <div class="mood" id="sad-mood" onclick="setMood('sad')">😔</div>
-       
-        <div class="submit-button">
-          <button onclick="submitMood()">Submit</button>
-        </div>
-        <div class="counter">
-          <p>Happy: <span id="happy-count">0</span></p>
-          <p>Sad: <span id="sad-count">0</span></p>
-        </div>
+        <div class="mood happy" onclick="increaseCounter('happy')">😊</div>
+        <div class="mood neutral" onclick="increaseCounter('neutral')">😐</div>
+        <div class="mood sad" onclick="decreaseCounter('sad')">😔</div>
       </div>
+      
+      <div class="counter-box">
+        <div class="counter happy-counter">Happy: 0</div>
+        <div class="counter sad-counter">Sad: 0</div>
+      </div>
+      
+      <button onclick="submitMood()">Submit</button>
 
       <div>
         <h3 class="latestStories">Latest User Stories</h3>
