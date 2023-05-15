@@ -10,30 +10,38 @@ function navFunction() {
   
   let happyCount = 0;
   let sadCount = 0;
-  let selectedMood = '';
   
-  function setMood(mood) {
-    selectedMood = mood;
-    document.querySelectorAll('.mood').forEach((mood) => {
-      mood.classList.remove('selected');
-    });
-    document.querySelector(`#${mood}-mood`).classList.add('selected');
+  function increaseCounter(mood) {
+    if (mood === 'happy') {
+      happyCount++;
+      document.querySelector('.happy-counter').textContent = 'Happy: ' + happyCount;
+    } else if (mood === 'neutral') {
+      // Do nothing
+    } else if (mood === 'sad') {
+      sadCount++;
+      document.querySelector('.sad-counter').textContent = 'Sad: ' + sadCount;
+    }
+  }
+  
+  function decreaseCounter(mood) {
+    if (mood === 'happy') {
+      happyCount--;
+      document.querySelector('.happy-counter').textContent = 'Happy: ' + happyCount;
+    } else if (mood === 'neutral') {
+      // Do nothing
+    } else if (mood === 'sad') {
+      sadCount++;
+      document.querySelector('.sad-counter').textContent = 'Sad: ' + sadCount;
+    }
   }
   
   function submitMood() {
-    if (selectedMood === 'happy') {
-      happyCount++;
-      document.querySelector('#happy-count').innerText = happyCount;
-    } else if (selectedMood === 'sad') {
-      sadCount++;
-      document.querySelector('#sad-count').innerText = sadCount;
-    }
-    selectedMood = '';
-    document.querySelectorAll('.mood').forEach((mood) => {
-      mood.classList.remove('selected');
-    });
+    const moodData = {
+      happy: happyCount,
+      sad: sadCount
+    };
+    localStorage.setItem('moodData', JSON.stringify(moodData));
   }
-  
   
   
   // On page reload, search localStorage for story data
