@@ -152,24 +152,16 @@ h1 {
     position: relative;
     z-index: 100;
     flex-direction: column;
-    width: 250px;
-    margin-right: .4%;
-    margin-top: 0;
-    padding-right: 0px;
-    text-align: right;
     background-color: #f1f1f1;
     border: solid;
     border-color: #6700ac;
     border-radius: 10px;
-    position: fixed;
+    position: absolute;
     top: .8%;
-    right: 4%;
-    /* box-shadow: 8px 8px 8px rgba(105, 105, 105, 0.8); */
+    right: 5%;
+    width: 15%;
 }
 
-.link {
-    width: 100%;
-}
 
 /* Style navigation menu links */
 .topnav .icon {
@@ -193,11 +185,11 @@ h1 {
 .navLinks {
     font-family: 'Merriweather Sans', sans-serif;
     color: #6700ac;
-    font-size: 300%;
-    margin-left: 1%;
+    font-size: 280%;
     padding: 10px;
+    padding-right: 55%;
     text-decoration: none;
-    width: 100%;
+    text-align: right;
 }
 
 .trans {
