@@ -60,7 +60,9 @@
             <form name="shareForm" onsubmit="event.preventDefault();">
                 <div>
                     <label class="shareLabel">Name or Alias</label>
-                    <input id="shareName" class="shareName" type="text" name="name" placeholder="Enter name or alias here....">
+                    <p class="shareReq">Max 10 Characters</p>
+                    <input id="shareName" class="shareName" type="text" name="name" maxlength="10" placeholder="Enter name or alias here....">
+                    <p class="valError" id="errorName"></p>
                 </div>
                 <div>
                     <label class="shareLabel">Pick an Avatar</label>
@@ -76,12 +78,14 @@
                 </div>
                 <div>
                     <label class="shareLabel">Introduction</label>
+                    <p class="shareReq">Max 100 Characters</p>
                     <textarea id="shareIntro" class="shareBrief" name="story" cols="10" rows="5" wrap="soft" maxlength="100" placeholder="Introduce yourself and your situation....."></textarea>
-                    <p class="shareValid">Max 100 Characters</p>
+                    <p class="valError" id="errorIntro"></p>
                 </div>
                 <div>
                     <label class="shareLabel">Share your story with others</label>
                     <textarea id="shareStory" class="shareStory" name="story" cols="10" rows="5" wrap="soft" placeholder="Enter the story you would like to share here...."></textarea>
+                    <p class="valError" id="errorStory"></p>
                 </div>
                 <img class="postBtn" src="images/post.png" alt="post button" onclick="submitStory()">
             </form>

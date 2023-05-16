@@ -28,6 +28,11 @@ closeButton.addEventListener('click', () => {
     modal.close();
 })
 
+// Retreive error elements for form validation
+const nameError = document.getElementById('errorName');
+const storyError = document.getElementById('errorStory');
+const introError = document.getElementById('errorIntro');
+
 // array for storing stories
 let storyData = [];
 
@@ -38,12 +43,39 @@ function submitStory() {
     let avatar = document.querySelector('#shareSelect').value;
     let intro = document.querySelector('#shareIntro').value;
 
+    // Validation
+    let errorCount = 0;
+
+    if (name === "") {
+        nameError.innerHTML = "Please enter your name";
+        errorCount++;
+    }
+
+    else if (nameError.innerHTML !== "") {
+        nameError.innerHTML = "";
+    }
+
+    if (story === "") {
+        storyError.innerHTML = "Please enter your story";
+        errorCount++;
+    }
+
+    if (intro === "") {
+        introError.innerHTML = "Please enter your intro";
+        errorCount++;
+    }
+
+    if (errorCount > 0) {
+        return;
+    }
+
     let storyDataObject = {
         name: name,
         avatar: avatar,
         intro: intro,
         story: story,
     };
+
 
     storyData.push(storyDataObject);
 
@@ -112,6 +144,4 @@ document.addEventListener('DOMContentLoaded', function () {
 function closeStory() {
     location.reload()
 }
-
-
 

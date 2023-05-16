@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
       // create cards for displaying stories
       const divElement = document.createElement('div');
       divElement.classList.add('storyCard');
+
+      // create function to produce a modal with stories from individual cards
       divElement.onclick = function () {
         const modalElement = document.createElement('dialog');
         modalElement.classList.add('storyModal');
@@ -85,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         storyModal.showModal();
 
       }
+
       divElement.innerHTML = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
       const namePost = `<h3>` + storyData[i].name + `<h3>`;
       divElement.insertAdjacentHTML('beforeend', namePost);
