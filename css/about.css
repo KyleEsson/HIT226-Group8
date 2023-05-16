@@ -105,3 +105,41 @@
     margin-bottom: 5%;
     color: #636363;
 }
+
+@media screen and (max-width: 768px) {
+    .card {
+        height: 140px;
+        width: 100px;
+    }
+
+    .read {
+        display: block;
+        font-size: small;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p {
+        display: none;
+    }
+
+    .card img {
+        width: 80%;
+        height: 50%;
+    }
+
+    h2 {
+        font-size: 250%;
+    }
+
+    #head {
+        font-size: 200%;
+    }
+
+    #details {
+        font-size: large;
+    }
+
+}

@@ -50,7 +50,6 @@ function submitStory() {
         nameError.innerHTML = "Please enter your name";
         errorCount++;
     }
-
     else if (nameError.innerHTML !== "") {
         nameError.innerHTML = "";
     }
@@ -59,10 +58,16 @@ function submitStory() {
         storyError.innerHTML = "Please enter your story";
         errorCount++;
     }
+    else if (storyError.innerHTML !== "") {
+        storyError.innerHTML = "";
+    }
 
     if (intro === "") {
         introError.innerHTML = "Please enter your intro";
         errorCount++;
+    }
+    else if (introError.innerHTML !== "") {
+        introError.innerHTML = "";
     }
 
     if (errorCount > 0) {
@@ -75,7 +80,6 @@ function submitStory() {
         intro: intro,
         story: story,
     };
-
 
     storyData.push(storyDataObject);
 
