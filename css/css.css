@@ -340,9 +340,9 @@ form input[type="submit"] {
 }
 
 
-/*_____________contacts_shortcuts__________*/
+/*_____________Contacts Shortcuts__________*/
 
-.footer_button {
+/* .footer_button {
     font-family: 'Roboto', sans-serif;
     text-align: left;
     padding: 5px;
@@ -395,4 +395,22 @@ form input[type="submit"] {
     .conLink {
         font-size: 100%;
     }
-}
+} */
+
+/*____________________Contacts Modal____________________*/
+
+  
+  /* The Close Button */
+  span {
+    color: black;
+    float:  top;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  span:hover,
+  span:focus {
+    color: #73c2ff;
+    text-decoration: none;
+    cursor: pointer;
+  }
