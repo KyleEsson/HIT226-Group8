@@ -303,8 +303,7 @@ form input[type="submit"] {
 
 
 .mayocard a {
-    background-color: #428edb;
-    color: white;
+    color: #428edb;
     padding: 0px;
     display: block;
     text-align: center;
@@ -312,7 +311,6 @@ form input[type="submit"] {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color: #ffffff;
     width: 100%;
     margin-bottom: 10px;
     margin-left: 1%;
