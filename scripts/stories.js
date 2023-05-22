@@ -108,24 +108,31 @@ document.addEventListener('DOMContentLoaded', function () {
             divElement.onclick = function () {
                 const modalElement = document.createElement('dialog');
                 modalElement.classList.add('storyModal');
-                modalElement.innerHTML = '<button class="shareClose" id="storyClose" onclick="closeStory()" ><i class="fa fa-close"></i></button>';
                 modalElement.setAttribute("data-backdrop", "static");
                 modalElement.setAttribute("data-keyboard", "false");
-                // modalElement.innerHTML =
-                //     `<div class="wave">
-                //     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                //     <path
-                //         d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                //         class="shape-fill"
-                //     ></path>
-                //     </svg>
-                // </div>`;
+                modalElement.innerHTML = `<div class="storyWave">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill">
+                            </path>
+                        </svg>
+                    </div>`;
                 const img = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
                 modalElement.insertAdjacentHTML('beforeend', img);
                 const namePost = `<h3>` + storyData[i].name + `<h3>`;
                 modalElement.insertAdjacentHTML('beforeend', namePost);
                 const storyPost = `<p>` + storyData[i].story + `</p>`;
                 modalElement.insertAdjacentHTML('beforeend', storyPost);
+                const closeStory = '<button class="closeStory" onclick="closeStory()">Close Story</button>';
+                modalElement.insertAdjacentHTML('beforeend', closeStory);
+                const modWave = `<div class="storyBottomWave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="nav-shape-fill"
+                    ></path>
+                    </svg>
+                </div>`;
+                modalElement.insertAdjacentHTML('beforeend', modWave);
                 const object = document.querySelector(".storyModals");
                 object.appendChild(modalElement);
                 const storyModal = document.querySelector('.storyModal');
