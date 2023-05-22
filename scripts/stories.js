@@ -99,8 +99,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // loop through storyData array and display each story
         for (let i = 0; i < storyData.length; i++) {
-            console.log(storyData[i].name);
-            console.log(storyData[i].story);
 
             // create cards for displaying stories
             const divElement = document.createElement('div');
