@@ -7,8 +7,8 @@ body {
 .shareAbout {
     text-align: justify;
     font-size: x-large;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
     color: #636363;
     margin-bottom: 40px;
 }
@@ -203,6 +203,8 @@ dialog::backdrop {
     align-items: center;
     margin-top: 60px;
     margin-bottom: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .storyCard {
@@ -364,9 +366,9 @@ dialog::backdrop {
     .share {
         width: 35%;
         left: 2%;
-        top: 6.2%;
-        height: 2.5%;
-        padding: 0;
+        top: 7.2%;
+        height: 5.5%;
+        padding: 5px;
         font-size: smaller;
     }
 
@@ -376,11 +378,20 @@ dialog::backdrop {
 
     .shareAbout {
         font-size: large;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .storyCards {
+        margin-left: 2%;
+        margin-right: 2%;
+        
     }
 
     .storyCard {
-        /* width: 80%; */
-        margin: 10px;
+        width: 40%;
+        margin: 5px;
+        height: 250px;
     }
 
     .storyCard img {

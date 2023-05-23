@@ -90,7 +90,7 @@ section {
 
 .navWave {
     position: absolute;
-    top: 5.0%;
+    top: 5.75%;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -220,7 +220,7 @@ h2 {
     }
 
     h1 {
-        font-size: 220%;
+        font-size: 180%;
     }
 
     .icon i {
