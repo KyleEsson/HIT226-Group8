@@ -150,7 +150,8 @@ button {
     width: 100%;
     border-radius: 12px;
     padding: 20px 30px 120px;
-    background: linear-gradient(90deg, #0056ac 43%, #428edb 100%);
+    background-color: #f6f6f6;
+    border: 3px solid #428edb;
     box-shadow: 0 5px 10px rgba(0,
             0,
             0,
@@ -162,7 +163,7 @@ button {
 .form header {
     font-size: 30px;
     text-align: center;
-    color: #a0ccf8;
+    color: #3498fc;
     font-weight: 600;
     cursor: pointer;
 }
@@ -210,7 +211,7 @@ form textarea {
     font-weight: 400;
     color: #333;
     border-radius: 8px;
-    background: #fff;
+    background: #ffffff;
 }
 
 form .checkbox {
@@ -226,9 +227,10 @@ form .checkbox {
     cursor: pointer;
 }
 
+
 form .checkbox label {
     cursor: pointer;
-    color: #fff;
+    color: #3498fc;
 }
 
 form a {
