@@ -1,132 +1,133 @@
-// Get the happy and sad buttons
-const happyBtn = document.getElementById("happyBtn");
-const sadBtn = document.getElementById("sadBtn");
-
-// Get the happy and sad count elements
-const happyCount = document.getElementById("happyCount");
-const sadCount = document.getElementById("sadCount");
-
-// Get the total mood score element
-const totalScore = document.getElementById("totalScore");
-
-// Get the percent bar and fill element
-const percentBarFill = document.getElementById("percentBarFill");
-
-// Get the message element
-const message = document.getElementById("message");
-
-// Get the user name input field and error message
-const userNameInput = document.getElementById("userNameInput");
-const userNameError = document.getElementById("userNameError");
-
-// Get the submit, refresh, and export buttons
-const submitBtn = document.getElementById("submitBtn");
-const refreshBtn = document.getElementById("refreshBtn");
-const exportBtn = document.getElementById("exportBtn");
-
-// Initialize the counts, total score, and selected moods
-let happy = 0;
-let sad = 0;
-let score = 0;
-let selectedMoods = [];
-
-// Array to store the submitted data
-let data = [];
-
-// Update the count and total score display
-function updateDisplay() {
-    happyCount.textContent = happy;
-    sadCount.textContent = sad;
-    totalScore.textContent = score;
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function navFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
 }
 
-// Enable or disable the submit button based on the selected moods and user name
-function toggleSubmitButton() {
-    if (selectedMoods.length === 0 || userNameInput.value === "") {
-        submitBtn.disabled = true;
-    } else {
-        submitBtn.disabled = false;
-    }
+let happyCount = 0;
+let sadCount = 0;
+
+function increaseCounter(mood) {
+  if (mood === 'happy') {
+    happyCount++;
+    document.querySelector('.happy-counter').textContent = 'Happy: ' + happyCount;
+  } else if (mood === 'neutral') {
+    // Do nothing
+  } else if (mood === 'sad') {
+    sadCount++;
+    document.querySelector('.sad-counter').textContent = 'Sad: ' + sadCount;
+  }
 }
 
-// Function to select a mood
-function selectMood(mood) {
-    if (!selectedMoods.includes(mood)) {
-        selectedMoods.push(mood);
-        toggleSubmitButton();
-    }
+function decreaseCounter(mood) {
+  if (mood === 'happy') {
+    happyCount--;
+    document.querySelector('.happy-counter').textContent = 'Happy: ' + happyCount;
+  } else if (mood === 'neutral') {
+    // Do nothing
+  } else if (mood === 'sad') {
+    sadCount++;
+    document.querySelector('.sad-counter').textContent = 'Sad: ' + sadCount;
+  }
 }
 
-// Function to submit the selected moods
 function submitMood() {
-    selectedMoods.forEach(mood => {
-        if (mood === 'happy') {
-            happy++;
-            score++;
-        } else if (mood === 'sad') {
-            sad++;
-            score--;
-        }
-
-        // Store the submitted mood and user name in data array
-        const userName = userNameInput.value;
-        data.push({ mood: mood, userName: userName });
-    });
-
-    selectedMoods = [];
-    toggleSubmitButton();
-    updateDisplay();
-    updatePercentBar();
-    updateMessage();
-    userNameInput.value = "";
-    userNameError.style.display = "none";
+  const moodData = {
+    happy: happyCount,
+    sad: sadCount
+  };
+  localStorage.setItem('moodData', JSON.stringify(moodData));
 }
 
-// Function to update the percent bar
-function updatePercentBar() {
-    const totalMoods = happy + sad;
-    const happyPercent = totalMoods > 0 ? (happy / totalMoods) * 100 : 0;
-    percentBarFill.style.width = `${happyPercent}%`;
-}
+// On page reload, search localStorage for story data
+document.addEventListener('DOMContentLoaded', function () {
+  if (localStorage.getItem('storyData')) {
 
-// Function to update the message
-function updateMessage() {
-    if (sad > happy) {
-        message.textContent = "Sorry to hear that you're sad.";
-    } else if (happy > sad) {
-        message.textContent = "We're glad that you're happy!";
-    } else {
-        message.textContent = "";
+    // parse localStorage data to JS object
+    storyData = JSON.parse(localStorage.getItem('storyData'));
+
+    // loop through storyData array and display each story
+    for (let i = storyData.length - 4; i < storyData.length; i++) {
+      console.log(storyData[i].name);
+      console.log(storyData[i].story);
+
+      // create cards for displaying stories
+      const divElement = document.createElement('div');
+      divElement.classList.add('storyCard');
+
+      // create function to produce a modal with stories from individual cards
+      divElement.onclick = function () {
+        const modalElement = document.createElement('dialog');
+        modalElement.classList.add('storyModal');
+        modalElement.innerHTML = '<button class="shareClose" id="storyClose" onclick="closeStory()" ><i class="fa fa-close"></i></button>';
+        modalElement.setAttribute("data-backdrop", "static");
+        modalElement.setAttribute("data-keyboard", "false");
+        // modalElement.innerHTML =
+        //     `<div class="wave">
+        //     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        //     <path
+        //         d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        //         class="shape-fill"
+        //     ></path>
+        //     </svg>
+        // </div>`;
+        const img = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
+        modalElement.insertAdjacentHTML('beforeend', img);
+        const namePost = `<h3>` + storyData[i].name + `<h3>`;
+        modalElement.insertAdjacentHTML('beforeend', namePost);
+        const storyPost = `<p>` + storyData[i].story + `</p>`;
+        modalElement.insertAdjacentHTML('beforeend', storyPost);
+        const object = document.querySelector(".storyModals");
+        object.appendChild(modalElement);
+        const storyModal = document.querySelector('.storyModal');
+        storyModal.showModal();
+
+      }
+
+      divElement.innerHTML = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
+      const namePost = `<h3>` + storyData[i].name + `<h3>`;
+      divElement.insertAdjacentHTML('beforeend', namePost);
+      const storyPost = `<p>` + storyData[i].intro + `</p>`;
+      divElement.insertAdjacentHTML('beforeend', storyPost);
+      const readStory = '<button class="readStory">Read Story</button>';
+      divElement.insertAdjacentHTML('beforeend', readStory);
+      const subject = document.querySelector(".storyCards");
+      subject.appendChild(divElement);
     }
+  }
+});
+
+function closeStory() {
+  location.reload()
 }
 
-// Function to refresh the mood tracker
-function refreshMood() {
-    happy = 0;
-    sad = 0;
-    score = 0;
-    selectedMoods = [];
-    toggleSubmitButton();
-    updateDisplay();
-    updatePercentBar();
-    updateMessage();
-    userNameInput.value = "";
-    userNameError.style.display = "none";
-}
 
-// Function to export the data as a CSV file
-function exportData() {
-    let csvContent = "data:text/csv;charset=utf-8,"
-        + "Mood,User Name\r\n";
+// // On page reload, search localStorage for story data
+// document.addEventListener('DOMContentLoaded', function () {
+//   if (localStorage.getItem('storyData')) {
 
-    data.forEach(entry => {
-        csvContent += `${entry.mood},${entry.userName}\r\n`;
-    });
+//     // parse localStorage data to JS object
+//     storyData = JSON.parse(localStorage.getItem('storyData'));
 
-    const encodedUri = encodeURI(csvContent);
-    const link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "mood_data.csv");
-    document.body.appendChild(link); // Required for Firefox
-    link.click();
-}
+//     // loop through storyData array and display each story
+//     for (let i = storyData.length - 3; i < storyData.length; i++) {
+//       console.log(storyData[i].name);
+//       console.log(storyData[i].story);
+
+//       // create cards for displaying stories
+//       const divElement = document.createElement('div');
+//       divElement.classList.add('storyCard');
+//       divElement.innerHTML = '<img src="images/' + storyData[i].avatar + '.png" alt="Avatar">';
+//       const namePost = `<h3>` + storyData[i].name + `<h3>`;
+//       divElement.insertAdjacentHTML('beforeend', namePost);
+//       const storyPost = `<p>` + storyData[i].story + `</p>`;
+//       divElement.insertAdjacentHTML('beforeend', storyPost);
+//       const subject = document.querySelector(".storyCards");
+//       subject.appendChild(divElement);
+//     }
+//   }
+// });
