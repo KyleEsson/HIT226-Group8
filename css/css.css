@@ -976,8 +976,7 @@ dialog::backdrop {
 
 .MainTitle {
 
-    float: center;
-    float: right;
+    float:inherit;
     text-align: center;
     color: #428edb;
     font-size: 20px;
@@ -996,16 +995,17 @@ dialog::backdrop {
 }
 
 .wrapper {
-    float: center;
+    float: inherit;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins",
         sans-serif;
 
-    margin-left: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    position: right;    
+    margin-left: 100px;
+    margin-top: 100px;
+    
     max-width: 500px;
     width: 100%;
     border-radius: 12px;
@@ -1039,6 +1039,17 @@ dialog::backdrop {
 }
 
 form input {
+    height: 60px;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 8px;
+    background: #fff;
+}
+form select {
     height: 60px;
     outline: none;
     border: none;
