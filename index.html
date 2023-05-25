@@ -13,80 +13,64 @@
     <title>Home</title>
 </head>
 <body>
-    <nav class="topnav">
-        <h1>BLUE MINDS</h1>
-        <!-- "Hamburger menu" -->
-        <a href="javascript:void(0);" class="icon" onclick="navFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </nav>
-    <!-- Navigation links (hidden by default) -->
-    <nav class="links" id="myLinks">
-        <a class="navLinks" href="bookings.html">Bookings</a>
-        <a class="navLinks" href="contacts.html">Contacts</a>
-        <a class="navLinks" href="about.html">About</a>
-        <a class="navLinks" href="stories.html">Stories</a>
-        <div id="google_translate_element"></div>
-    </nav>
-    <nav>
-      <div class="navWave">
-          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              class="nav-shape-fill"
-            ></path>
-          </svg>
-      </div>
+  <nav class="topnav">
+    <h1>BLUE MINDS</h1>
+    <!-- "Hamburger menu" -->
+    <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   </nav>
+  <!-- Navigation links (hidden by default) -->
+  <nav class="links" id="myLinks">
+    <a class="navLinks" href="bookings.html">Bookings</a>
+    <a class="navLinks" href="contacts.html">Contacts</a>
+    <a class="navLinks" href="about.html">About</a>
+    <a class="navLinks" href="stories.html">Stories</a>
+    <a class="navLinks" href="mood.html">Mood Tracker</a>
+    <div id="google_translate_element"></div>
+  </nav>
+  <nav>
+    <div class="navWave">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="nav-shape-fill"
+        ></path>
+      </svg>
+    </div>
+  </nav>
+  <div>
+    <h2 class="latestStories">Latest User Stories</h2>
+    <div class="storyCards"></div>
+    <div class="storyModals"></div>
+  </div>
     <section>
         <div class="homecard-container">
         <div class="homecard">
           <h2>About</h2>
           <p>We are a mental health website and there are more information about different kinds of mental health illness. As you can see there is a link below to read more about kinds of mental health illness.</p>
-          <ul>
-            <li><a href="about.html" onclick="displaySearch()">Click For More Informations</a></li>
-          </ul>
+          <a href="about.html">Click For More Information</a>
         </div>
         <div class="homecard">
           <h2>Professor Team</h2>
           <p>Having a professional team is essential for any mental health website. Mental health professionals on the team can provide valuable insights and knowledge about mental health, the latest treatments, and best practices.</p>
-          <ul>
-            <li><a href="#" onclick="displayFeatured()">Visit Our Professional Team</a></li>
-          </ul>
+          <a href="#">Visit Our Professional Team</a>
         </div>
         <div class="homecard">
           <h2>Booking</h2>
           <p>Booking is an essential feature for any mental health website that offers counseling or therapy services. It allows users to schedule appointments with mental health professionals easily and efficiently, providing them with the care and support they need.</p>
-          <ul>
-            <li><a href="#" onclick="displayTestimonials()">Our Services</a></li>
-          </ul>
+          <a href="#">Our Services</a>
         </div>
         <div class="homecard">
-          <h2>Contact Us</h2>
-          <p>If you have any questions or messages want to inform our team, please click the link below to get contact with us.</p>
-          <ul>
-            <li><a href="#" onclick="displayServices()">Contacts</a></li>
-          </ul>
+          <h2>Stories</h2>
+          <p>Share your journey on Blue Minds with others by posting your story and reading others.</p>
+          <a href="#">Share your Stories</a>
         </div>
-      </div>
-
-      <div class="mood-box">
-        <div class="mood happy" onclick="increaseCounter('happy')">😊</div>
-        <div class="mood neutral" onclick="increaseCounter('neutral')">😐</div>
-        <div class="mood sad" onclick="decreaseCounter('sad')">😔</div>
-      </div>
-      
-      <div class="counter-box">
-        <div class="counter happy-counter">Happy: 0</div>
-        <div class="counter sad-counter">Sad: 0</div>
-      </div>
-      
-      <button onclick="submitMood()">Submit</button>
-
-      <div>
-        <h3 class="latestStories">Latest User Stories</h3>
-        <div class="storyCards"></div>
-        <div class="storyModals"></div>
+        <div class="homecard">
+          <h2>Mood Tracker</h2>
+          <p>Share your journey on Blue Minds with others by posting your story and reading others.</p>
+          <a href="#">Track your mood</a>
+        </div>
       </div>
     </section>
     <footer>
