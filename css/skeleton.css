@@ -90,12 +90,11 @@ section {
 
 .navWave {
     position: absolute;
-    top: 5.0%;
+    top: 80px;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    background-color: #f1f1f1;
 }
 
 .navWave svg {
@@ -145,6 +144,7 @@ h1 {
     background-color: #6700ac;
     position: relative;
     top: 0;
+    height: 80px;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -234,10 +234,11 @@ h2 {
     .topnav {
         position: sticky;
         top: 0;
+        height: 50px;
     }
 
     .navWave {
-        top: 4.0%;
+        top: 50px;
         position: fixed;
     }
 
