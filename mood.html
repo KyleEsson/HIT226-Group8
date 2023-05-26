@@ -40,6 +40,49 @@
     </nav>
     <section>
 
+        <div class="container">
+            <h2>Premium Mood Tracker</h2>
+            <div class="explanation">
+                <p><strong>How does the Mood Tracker work?</strong></p>
+                <p>1. Enter your name in the provided input field.</p>
+                <p>2. Click on the happy or sad emoji to select your mood.</p>
+                <p>3. Click the Submit button to record your mood.</p>
+                <p>4. The counters will keep track of the number of happy and sad moods.</p>
+                <p>5. The total mood score will be calculated based on the selected moods.</p>
+                <p>6. The percent bar will show the distribution of happy moods.</p>
+                <p>7. The message below will provide feedback based on the mood data.</p>
+                <p>8. Use the Refresh button to reset the mood tracker.</p>
+                <p>9. The Export Data button allows you to download the recorded mood data.</p>
+            </div>
+            <div class="counter">
+                <div>
+                    <p>Happy count: <span id="happyCount">0</span></p>
+                    <div class="mood-input">
+                        <input type="text" id="userNameInput" placeholder="Enter your name">
+                        <button id="happyBtn" onclick="selectMood('happy')">😄</button>
+                    </div>
+                </div>
+                <div>
+                    <p>Sad count: <span id="sadCount">0</span></p>
+                    <div class="mood-input">
+                        <button id="sadBtn" onclick="selectMood('sad')">😔</button>
+                    </div>
+                </div>
+            </div>
+            <p>Total Mood Score: <span id="totalScore">0</span></p>
+            <div class="percent-bar">
+                <div id="percentBarFill" class="percent-bar-fill"></div>
+            </div>
+            <p class="message" id="message"></p>
+            <div class="mood-input">
+        
+                <button id="submitBtn" disabled onclick="submitMood()">Submit</button>
+            </div>
+            <p id="userNameError" style="color: red; display: none;">Please enter a user name.</p>
+            <button id="refreshBtn" onclick="refreshMood()">Refresh</button>
+            <button id="exportBtn" onclick="exportData()">Export Data</button>
+        </div>
+
     </section>
     <footer>
         <div class="footWave">
