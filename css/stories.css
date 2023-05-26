@@ -5,12 +5,13 @@ body {
 }
 
 .shareAbout {
-    text-align: justify;
-    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+    font-size: 400%;
     margin-left: 2%;
     margin-right: 2%;
-    color: #000000;
-    margin-bottom: 40px;
+    color: #6700ac;
+    margin-bottom: 20px;
 }
 
 .share {
