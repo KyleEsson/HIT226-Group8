@@ -154,14 +154,16 @@ h1 {
     position: absolute;
     flex-direction: column;
     z-index: 999;
-    background-color: #f1f1f1;
+    background-color: #6700ac;
     border: solid;
     border-color: #6700ac;
-    border-radius: 10px;
-    right: 0;
-    top: 80px;
-    width: 15%;
-    height: auto;
+    border-radius: 35px;
+    border-width: 15px;
+    right: 90px;
+    top: 5px;
+    width: 250px;
+    text-align: center;
+    /* height: auto; */
 }
 
 
@@ -186,12 +188,18 @@ h1 {
 
 .navLinks {
     font-family: 'Merriweather Sans', sans-serif;
-    color: #6700ac;
+    color: #ffffff;
     font-size: 280%;
-    padding: 10px;
-    margin-top: 100px;
+    padding-top: 50px;
+    margin: auto;
     text-decoration: none;
-    text-align: right;
+}
+
+hr {
+    border: solid;
+    border-color: #ffffff;
+    border-width: 5px;
+    border-radius: 5px;
 }
 
 .trans {
@@ -211,7 +219,7 @@ h2 {
 @media screen and (max-width: 768px) {
     .links {
         right: 40px;
-        top: 2px;
+        top: 0px;
         width: 30%;
         position: fixed;
     }
