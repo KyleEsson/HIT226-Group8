@@ -52,9 +52,9 @@
 
 .card:hover {
     background-color: #d373ff4b;
+    cursor: pointer;
     transition-duration: 0.3s;
     transform: scale(1.10, 1.10);
-    cursor: pointer;
     box-shadow: 0 5px 8px rgba(105, 105, 105, 0.8);
 }
 
