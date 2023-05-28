@@ -9,11 +9,9 @@ function navFunction() {
 }
 
 const wrapper = document.querySelector(".wrapper"),
-  signupHeader = document.querySelector(".signup header"),
-  loginHeader = document.querySelector(".login header");
-loginHeader.addEventListener("click", () => {
-  wrapper.classList.add("active");
-});
+signupHeader = document.querySelector(".signup header");
+  
+
 signupHeader.addEventListener("click", () => {
   wrapper.classList.remove("active");
 });
