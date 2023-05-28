@@ -380,10 +380,11 @@ dialog::backdrop {
 
     h2 {
         margin-top: 12%;
+        font-size: 400%;
     }
 
     .shareAbout {
-        font-size: large;
+        font-size: 200%;
     }
 
     .storyCards {
