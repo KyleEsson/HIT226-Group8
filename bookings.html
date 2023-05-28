@@ -45,33 +45,20 @@
     </nav>
     <div class="MainTitle">BOOK NOW</div>
     
-    <section class="wrapper">
+    <section class="wrapper" >
 
         
         <div class="form signup">
             <header>Booking</header>
-            <form action="#">
+            <form action="#" onsubmit="myfunc(event)">
               <input type="text" id="username" placeholder="Full name (required)" required />
               <input type="email" id="email" placeholder="Email address (required)" required />
-              <input type="date" id='d1' name='d1' placeholder="Select Booking Date"/>
-              <script>
-                var d= new Date()
-                var yr=d.getFullYear();
-                var month=d.getMonth()+1
-
-                if(month<10){
-                  month='0'+month
-                }
-                var date=d.getDate();
-                if(date<10){
-                  date='0'+date
-                }
-                var c_date=yr+"-"+month+"-"+date;
-
-                document.getElementById('')
-              </script>
+              <label>Select Booking date</label>
+              <input type="date" id="d1" required/>
+              <label>Select Time</label>
+              <input type="time" id="time" placeholder="select the time" required/>
               <input type="password" id="password" placeholder="Create Password" required />
-              <input type="password" id="password" placeholder="Confirm Password" required />
+              <input type="password" id="confirm_password" placeholder="Confirm Password" required />
               <select id ="Specialist" required>
                 <option value="Select the Specialist">Select the Specialist</option>
                 <option value="Mark Fergusson">Mark Fergusson</option>
@@ -90,26 +77,30 @@
                 <input type="checkbox" id="signupCheck" />
                 <label for="signupCheck">Hide my booking profile from anyone</label>
               </div>
-              <input type="submit" onclick="test()" value="Book" />
+              <input type="submit" value="Book" />
               <script type="text/javascript">
-                function submit(event){
+                function myfunc(event){
                   event.preventDefault();
 
                   var uid = document.getElementById("username").value;
                   var pw = document.getElementById("password").value;
+                  var pw = document.getElementById("confirm_password").value;
                   var email = document.getElementById("email").value;
                   var date = document.getElementById("d1").value;
-                  var specialist = document.getElementById("Specialist").value;
+                  
                   var freeform = document.getElementById("freeform").value;
                   var address = document.getElementById("address").value;
 
                   localStorage.setItem('ls_username', username);
                   localStorage.setItem('ls_password', password);
+                  localStorage.setItem('ls_confirm_password', confirm_password);
                   localStorage.setItem('ls_email', email);
                   localStorage.setItem('ls_d1', d1);
-                  localStorage.setItem('ls_Specialist', Specialist);
+                  
                   localStorage.setItem('ls_freeform', freeform);
                   localStorage.setItem('ls_address', address);
+
+              
                 }
                 
               </script>
