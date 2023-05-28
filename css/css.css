@@ -2,6 +2,11 @@
 
 /*________________________________INDEX.HTML CSS________________________________________*/
 
+.contact-caption {
+    text-align: center;
+    padding-bottom: 5%;
+}
+
 .homecard-container {
     display: flex;
     flex-wrap: wrap;
