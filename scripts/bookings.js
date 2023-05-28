@@ -11,12 +11,12 @@ function navFunction() {
 function myfunc(event){
   event.preventDefault();
 
-  var uid = document.getElementById("username").value;
-  var pw = document.getElementById("password").value;
-  var pw = document.getElementById("confirm_password").value;
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var confirm_password = document.getElementById("confirm_password").value;
   var email = document.getElementById("email").value;
-  var date = document.getElementById("d1").value;
-  
+  var d1 = document.getElementById("d1").value;
+  var time = document.getElementById("time").value;
   var freeform = document.getElementById("freeform").value;
   var address = document.getElementById("address").value;
 
@@ -25,7 +25,7 @@ function myfunc(event){
   localStorage.setItem('ls_confirm_password', confirm_password);
   localStorage.setItem('ls_email', email);
   localStorage.setItem('ls_d1', d1);
-  
+  localStorage.setItem('ls_time', time);
   localStorage.setItem('ls_freeform', freeform);
   localStorage.setItem('ls_address', address);
 
