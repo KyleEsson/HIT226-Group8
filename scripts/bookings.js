@@ -12,8 +12,6 @@ function myfunc(event){
   event.preventDefault();
 
   var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-  var confirm_password = document.getElementById("confirm_password").value;
   var email = document.getElementById("email").value;
   var d1 = document.getElementById("d1").value;
   var time = document.getElementById("time").value;
@@ -21,8 +19,6 @@ function myfunc(event){
   var address = document.getElementById("address").value;
 
   localStorage.setItem('ls_username', username);
-  localStorage.setItem('ls_password', password);
-  localStorage.setItem('ls_confirm_password', confirm_password);
   localStorage.setItem('ls_email', email);
   localStorage.setItem('ls_d1', d1);
   localStorage.setItem('ls_time', time);
