@@ -8,30 +8,12 @@ function navFunction() {
     }
 }
 
-/* Integrating Google Translate into the navigation bar */
-
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-        { pageLanguage: 'en' },
-        'google_translate_element'
-    );
-}
-
-// /* The contacts list button to show a menu listing each specialist page */
-// function contactFunction() {
-//     var contact_link = document.getElementById("f_link");
-//     if (contact_link.style.display === "block") {
-//         contact_link.style.display = "none";
-//     } else {
-//         contact_link.style.display = "block";
-//     }
-// }
 
 
 //Mark Fergusson Details
-const cont_open = document.querySelector("[open-contact]")
-const cont_close = document.querySelector("[close-contact]")
-const cont_modal = document.querySelector("[contact-modal]")
+const cont_open = document.querySelector("#open-contact")
+const cont_close = document.querySelector("#close-contact")
+const cont_modal = document.querySelector("#contact-modal")
 
 cont_open.addEventListener("click", () => {
     cont_modal.showModal()
@@ -43,9 +25,9 @@ cont_close.addEventListener("click", () => {
 
 
 //Olivia Edwards Details
-const olivia_open = document.querySelector("[open-olivia]")
-const olivia_close = document.querySelector("[close-olivia]")
-const olivia_modal = document.querySelector("[contact-olivia]")
+const olivia_open = document.querySelector("#open-olivia")
+const olivia_close = document.querySelector("#close-olivia")
+const olivia_modal = document.querySelector("#contact-olivia")
 
 olivia_open.addEventListener("click", () => {
     olivia_modal.showModal()
@@ -57,9 +39,9 @@ olivia_close.addEventListener("click", () => {
 
 
 //Malcom Woods Details
-const malcom_open = document.querySelector("[open-malcom]")
-const malcom_close = document.querySelector("[close-malcom]")
-const malcom_modal = document.querySelector("[contact-malcom]")
+const malcom_open = document.querySelector("#open-malcom")
+const malcom_close = document.querySelector("#close-malcom")
+const malcom_modal = document.querySelector("#contact-malcom")
 
 malcom_open.addEventListener("click", () => {
     malcom_modal.showModal()
@@ -70,9 +52,9 @@ malcom_close.addEventListener("click", () => {
 })
 
 //Liam Higgins Details
-const liam_open = document.querySelector("[open-liam]")
-const liam_close = document.querySelector("[close-liam]")
-const liam_modal = document.querySelector("[contact-liam]")
+const liam_open = document.querySelector("#open-liam")
+const liam_close = document.querySelector("#close-liam")
+const liam_modal = document.querySelector("#contact-liam")
 
 liam_open.addEventListener("click", () => {
     liam_modal.showModal()
@@ -84,9 +66,9 @@ liam_close.addEventListener("click", () => {
 
 
 //Tina Risitas Details
-const tina_open = document.querySelector("[open-tina]")
-const tina_close = document.querySelector("[close-tina]")
-const tina_modal = document.querySelector("[contact-tina]")
+const tina_open = document.querySelector("#open-tina")
+const tina_close = document.querySelector("#close-tina")
+const tina_modal = document.querySelector("#contact-tina")
 
 tina_open.addEventListener("click", () => {
     tina_modal.showModal()
