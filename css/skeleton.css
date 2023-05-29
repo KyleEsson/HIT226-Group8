@@ -30,7 +30,6 @@ section {
 .footerBanner h4 {
     font-family: 'Roboto', sans-serif;
     padding-top: 0px;
-    padding-left: 25px;
     font-size: xx-large;
     margin-bottom: 5px;
     margin-top: 05%;
@@ -49,7 +48,7 @@ section {
 }
 
 .footerLinks {
-    width: 33%;
+    width: 50%;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -83,7 +82,7 @@ section {
     display: block;
     float: right;
     text-align: right;
-    width: 38%;
+    width: 30%;
     padding-top: 18px;
     padding-right: 12%;
 }
@@ -264,7 +263,7 @@ h2 {
 
     .footerBanner h4 {
         font-size: medium;
-        margin-top: 25%;
+        margin-top: 10%;
     }
 
     .footerBanner a {
@@ -276,7 +275,7 @@ h2 {
     }
 
     .footerLinks {
-        width: 30%;
+        width: 50%;
     }
 
     .footerClose {

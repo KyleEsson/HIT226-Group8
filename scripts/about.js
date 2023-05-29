@@ -1,14 +1,26 @@
-const card1 = document.getElementById('card1')
-const card2 = document.getElementById('card2')
-const card3 = document.getElementById('card3')
-const card4 = document.getElementById('card4')
-const card5 = document.getElementById('card5')
-const card6 = document.getElementById('card6')
-const head = document.getElementById('head')
-const details = document.getElementById('details')
+// pre load images for increased performance
+this.addEventListener("DOMContentLoaded", preloadImages, true);
 
+function preloadImages(e) {
+    var imageArray = new Array("images/anxiety.png", "images/bipolar.png", "images/depression.png", "images/help.png", "images/mind.png", "images/ocd.png", "images/ptsd.png");
 
+    for (var i = 0; i < imageArray.length; i++) {
+        var tempImage = new Image();
+        tempImage.src = imageArray[i];
+    }
+}
 
+// Toggle between showing and hiding the navigation menu
+function navFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+// Class used for storing data that will be dynamically added to the page
 class about {
     constructor(title, info) {
         this.title = title;
@@ -29,8 +41,8 @@ const seek = new about(
 const anx = new about(
     'Anxiety',
     "Anxiety is a natural response to stress and is a normal part of life. It's our body's way of responding to a threat, and it can help us stay alert and focused. However, when anxiety becomes overwhelming or chronic, it can interfere with daily life and become a mental health disorder. Anxiety disorders are the most common mental health disorders in the United States, affecting approximately 40 million adults. \n\n\
-    There are different types of anxiety disorders, including generalized anxiety disorder, social anxiety disorder, panic disorder, and specific phobias. Symptoms of anxiety can include excessive worry, restlessness, irritability, muscle tension, difficulty sleeping, and physical symptoms like sweating or rapid heartbeat. Treatment for anxiety can include therapy, medication, or a combination of both. Learning coping skills like mindfulness, deep breathing, and exercise can also help manage anxiety. It's important to seek help from a mental health professional if you're struggling with anxiety, as they can provide guidance and support to help you manage your symptoms. \n\n\
-    Anxiety can be triggered by a variety of factors, including genetics, brain chemistry, and life experiences. Traumatic events, major life changes, and chronic stress can all contribute to the development of anxiety disorders. While anxiety can be a difficult and overwhelming experience, it's important to remember that it's treatable. Seeking help from a mental health professional can be a crucial step in managing anxiety and improving overall well-being. Additionally, practicing self-care and healthy habits like getting enough sleep, eating well, and exercising regularly can also help reduce symptoms of anxiety. With the right treatment and support, it's possible to live a fulfilling life while managing anxiety."
+        There are different types of anxiety disorders, including generalized anxiety disorder, social anxiety disorder, panic disorder, and specific phobias. Symptoms of anxiety can include excessive worry, restlessness, irritability, muscle tension, difficulty sleeping, and physical symptoms like sweating or rapid heartbeat. Treatment for anxiety can include therapy, medication, or a combination of both. Learning coping skills like mindfulness, deep breathing, and exercise can also help manage anxiety. It's important to seek help from a mental health professional if you're struggling with anxiety, as they can provide guidance and support to help you manage your symptoms. \n\n\
+        Anxiety can be triggered by a variety of factors, including genetics, brain chemistry, and life experiences. Traumatic events, major life changes, and chronic stress can all contribute to the development of anxiety disorders. While anxiety can be a difficult and overwhelming experience, it's important to remember that it's treatable. Seeking help from a mental health professional can be a crucial step in managing anxiety and improving overall well-being. Additionally, practicing self-care and healthy habits like getting enough sleep, eating well, and exercising regularly can also help reduce symptoms of anxiety. With the right treatment and support, it's possible to live a fulfilling life while managing anxiety."
 );
 
 const dep = new about(
@@ -43,51 +55,41 @@ const dep = new about(
 const bipolar = new about(
     'Bipolar Disorder',
     `Bipolar disorder is a mental health condition characterized by extreme mood swings, including periods of depression and mania. During a depressive episode, a person with bipolar disorder may feel hopeless, sad, and lose interest in things they used to enjoy. During a manic episode, they may feel elated, talkative, and have increased energy. However, manic episodes can also be dangerous as the person may engage in risky behavior or have delusions of grandeur. Bipolar disorder is a lifelong condition, but with proper treatment, people with the disorder can lead fulfilling lives. \n\n\
-    The exact cause of bipolar disorder is not fully understood, but it is believed to be a combination of genetic and environmental factors. Some studies suggest that imbalances in certain brain chemicals, such as dopamine and serotonin, may play a role in the development of bipolar disorder. Other factors that may contribute to the disorder include stressful life events, substance abuse, and a family history of bipolar disorder. \n\n\
-    Treatment for bipolar disorder typically involves a combination of medication and therapy. Mood stabilizers are commonly prescribed to help control manic and depressive episodes, while antidepressants may also be used during depressive episodes. Therapy, such as cognitive-behavioral therapy, can help individuals with bipolar disorder learn coping skills and manage their symptoms. It is important for individuals with bipolar disorder to have a strong support system and to work closely with their healthcare providers to manage their condition.`
+        The exact cause of bipolar disorder is not fully understood, but it is believed to be a combination of genetic and environmental factors. Some studies suggest that imbalances in certain brain chemicals, such as dopamine and serotonin, may play a role in the development of bipolar disorder. Other factors that may contribute to the disorder include stressful life events, substance abuse, and a family history of bipolar disorder. \n\n\
+        Treatment for bipolar disorder typically involves a combination of medication and therapy. Mood stabilizers are commonly prescribed to help control manic and depressive episodes, while antidepressants may also be used during depressive episodes. Therapy, such as cognitive-behavioral therapy, can help individuals with bipolar disorder learn coping skills and manage their symptoms. It is important for individuals with bipolar disorder to have a strong support system and to work closely with their healthcare providers to manage their condition.`
 );
 
 const ptsd = new about(
     'Post-traumatic Stress Disorder',
     `Post-traumatic stress disorder (PTSD) is a mental health condition that can develop after experiencing or witnessing a traumatic event. Traumatic events can include but are not limited to physical or sexual assault, combat, natural disasters, and serious accidents. People with PTSD may experience a range of symptoms such as re-experiencing the trauma through flashbacks, nightmares or intrusive thoughts; avoidance of reminders of the trauma; negative changes in thoughts or mood, including feelings of isolation, guilt or shame; and hyperarousal, such as feeling constantly on edge or easily startled. \n\n\
-    PTSD can affect anyone, regardless of age, gender, race or background. However, certain factors may increase the likelihood of developing PTSD, including a history of mental health issues, prior traumatic experiences, and lack of social support. PTSD can be diagnosed by a mental health professional and treatment options include therapy, medication, and support groups. It's important to note that seeking help for PTSD is a sign of strength and can significantly improve one's quality of life. \n\n\   
-    It's also important to note that while PTSD is a serious condition, recovery is possible. With the right treatment and support, people with PTSD can learn to manage their symptoms and lead fulfilling lives. It's important to raise awareness about PTSD and reduce stigma around seeking help, as many people with PTSD may feel ashamed or alone. Education about PTSD can help break down these barriers and ensure that those who need help are able to access it."`
+            PTSD can affect anyone, regardless of age, gender, race or background. However, certain factors may increase the likelihood of developing PTSD, including a history of mental health issues, prior traumatic experiences, and lack of social support. PTSD can be diagnosed by a mental health professional and treatment options include therapy, medication, and support groups. It's important to note that seeking help for PTSD is a sign of strength and can significantly improve one's quality of life. \n\n\   
+            It's also important to note that while PTSD is a serious condition, recovery is possible. With the right treatment and support, people with PTSD can learn to manage their symptoms and lead fulfilling lives. It's important to raise awareness about PTSD and reduce stigma around seeking help, as many people with PTSD may feel ashamed or alone. Education about PTSD can help break down these barriers and ensure that those who need help are able to access it."`
 );
 
 const ocd = new about(
     'Obsessive-Compulsive Disorder',
     `Obsessive-Compulsive Disorder (OCD) is a mental health condition that affects millions of people around the world. It is characterized by recurring, intrusive thoughts or images (obsessions) that cause distress and anxiety, as well as repetitive behaviors or mental acts (compulsions) that individuals perform to reduce this distress. OCD can manifest in many different ways and can impact various areas of life, such as work, school, and relationships. \n\n\
-    People with OCD may engage in a wide range of compulsions, such as excessive cleaning, counting, checking, or organizing. These compulsions may provide temporary relief, but they can also interfere with daily functioning and take up a lot of time and energy. Additionally, individuals with OCD may experience a lot of shame and guilt related to their obsessions and compulsions, which can make it difficult to seek help. \n\n\
-    Treatment for OCD typically involves a combination of medication and therapy, such as cognitive-behavioral therapy (CBT) or exposure and response prevention (ERP). These treatments can help individuals with OCD learn to manage their symptoms, reduce their anxiety, and improve their quality of life. With the right support and treatment, many people with OCD are able to live fulfilling, meaningful lives.`
+                People with OCD may engage in a wide range of compulsions, such as excessive cleaning, counting, checking, or organizing. These compulsions may provide temporary relief, but they can also interfere with daily functioning and take up a lot of time and energy. Additionally, individuals with OCD may experience a lot of shame and guilt related to their obsessions and compulsions, which can make it difficult to seek help. \n\n\
+                Treatment for OCD typically involves a combination of medication and therapy, such as cognitive-behavioral therapy (CBT) or exposure and response prevention (ERP). These treatments can help individuals with OCD learn to manage their symptoms, reduce their anxiety, and improve their quality of life. With the right support and treatment, many people with OCD are able to live fulfilling, meaningful lives.`
 );
 
+// get specific card elements from html for event listeners
+const card1 = document.getElementById('card1')
+const card2 = document.getElementById('card2')
+const card3 = document.getElementById('card3')
+const card4 = document.getElementById('card4')
+const card5 = document.getElementById('card5')
+const card6 = document.getElementById('card6')
+const head = document.getElementById('head')
+const details = document.getElementById('details')
 
-// const about_details = require('../scripts/about.json');
-// console.log(about_details);
-
-this.addEventListener("DOMContentLoaded", preloadImages, true);
-
-function preloadImages(e) {
-    var imageArray = new Array("images/anxiety.png", "images/bipolar.png", "images/depression.png", "images/help.png", "images/mind.png", "images/ocd.png", "images/ptsd.png");
-
-    for (var i = 0; i < imageArray.length; i++) {
-        var tempImage = new Image();
-        tempImage.src = imageArray[i];
-    }
-}
-
+// load default data on page load
 document.addEventListener('DOMContentLoaded', function () {
     head.innerText = (seek.title);
     details.innerText = (seek.info);
 })
 
-fetch('../scripts/about.json')
-    .then(res => res.json())
-    .then(about_details => {
-        console.log(about_details);
-    })
-
-
+// event listeners for each card to change data on click
 card1.addEventListener("click", function handleClick() {
     head.innerText = (seek.title);
     details.innerText = (seek.info);
@@ -117,21 +119,3 @@ card6.addEventListener("click", function handleClick() {
     head.innerText = (ocd.title);
     details.innerText = (ocd.info);
 })
-
-function navFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
-
-/* Integrating Google Translate into the navigation bar */
-
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-        { pageLanguage: 'en' },
-        'google_translate_element'
-    );
-}

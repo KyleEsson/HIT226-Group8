@@ -86,6 +86,7 @@ function submitStory() {
     // store story data in localStorage
     localStorage.setItem('storyData', JSON.stringify(storyData));
 
+    // close modal and reload page
     modal.close();
     location.reload()
 }
